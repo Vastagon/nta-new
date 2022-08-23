@@ -1,0 +1,74 @@
+.schedule-title{
+  text-align: center;
+  margin-top: 2%;
+}
+.schedule-container{
+  color: white;
+  margin-left: 10%;
+  margin-top: 7.5vh;
+  margin-bottom: 5%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+}
+.day{
+  background-color: black;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border-radius: 10px;
+}
+/* Left side curves */
+.schedule-row:nth-child(7n-6){
+  border-radius: 20px 0 0 20px;
+  border-style: none;
+
+}
+/* Right side curves */
+.schedule-row:nth-child(7n){
+  border-radius: 0 20px 20px 0;
+  border-left: 2px;
+  border-style: none;
+}
+
+.day:nth-child(n+1){
+  border-left: 0;
+}
+
+/* Removes double border lines in schedule */
+.schedule-row:nth-child(n){
+  border-right: 0;
+}
+.schedule-row:nth-child(7n){
+  border-left: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+.schedule-row{
+  line-height: 10vh;
+  background-color: #565656;
+  height: 10vh;
+  border-left: 1px;
+  border-right: 1px;
+  border-top: 0;
+  border-bottom: 0;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+}
+.row2{
+  /* background-color: #A9A9A9; */
+  /* background-color: #D7CEC7; */
+  /* background-color: #B37D4E; */
+  background-color: #1C393D;
+  background-color: rgba(28,57,61,.6)
+
+}
+.empty{
+  background-color: white;
+}

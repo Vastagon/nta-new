@@ -1,0 +1,95 @@
+/* Contact Form */
+.contact-input{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  color: white;
+  background-color: seagreen;
+  padding-bottom: 1rem;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: gray;
+  border-width: 2px;
+  margin-left: 5%;
+}
+.contact-input > form > input{
+  margin-top: 1rem;
+  width: 80%;
+  padding: 10px 5px;
+}
+.contact-input > form > button{
+  width: 50%;
+  padding: 10px 5px;
+  margin-top: 2rem;
+}
+.contact-input-title{
+  color: black;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Contact Us */
+.contact-us{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10%;
+  gap: 5%;
+}
+.contactus-card{
+  border-color:  black;
+  background-color: lightgray;
+  border-style: solid;
+  border-width: 1px;
+  /* background-color: #397754; */
+  border-radius: 10px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.contactus-card > h4{
+  font-size: 1.6rem;
+}
+.contactus-map{
+  width: 99.8%;
+  margin-top: 10%;
+}
+.contact-info > div{
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+  margin: auto;
+}
+.loading-text{
+  
+}
+.spinner-container{
+  position: fixed;
+  top: 43%;
+  left: 31.5%;
+  background-color: gray;
+  width: 30vw;
+  height: 10vh;
+  padding-top: 1%;
+  padding-bottom: 4%;
+}
+.form-label{
+  margin-top: .5rem;
+}
