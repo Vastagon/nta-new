@@ -5,7 +5,7 @@ export default function Footer(){
 
     return(
         <footer id="footer">
-            <img alt="not found" className="footer-icon" src={require("../images/NTALogo.png")} />
+            <img alt="not found" className="footer-icon" src={require("../images/NTALogo2.png")} />
             <div className="quick-links footer-segment">
                 <h2>Quick Links</h2>
 

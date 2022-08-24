@@ -1,6 +1,7 @@
 .overview{
     width: 65%;
-    background-color: #A9A9A9;
+    /* background-color: #A9A9A9; */
+    background-color: #555555;
     color: white;
     margin-left: 35%;
     margin-top: 10%;
@@ -20,7 +21,8 @@
 
 
 .children-classes{
-    background-color: #A9A9A9;
+    /* background-color: #A9A9A9; */
+    background-color: #7c7c7c;
     color: white;
     width: 80%;
     margin-left: 10%;

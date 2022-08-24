@@ -31,18 +31,6 @@ export default function AfterSchool(){
                         a student is learning, one of the things that they all require is discipline. Learning a number of different techniques, sparring with a teammate,
                         or learning forms all require a high degree of concentration. Students are sometimes surprised at how much faster they are able to focus their minds 
                         compared to when they started.</p>
-
-                        <p>Taekwondo helps build mental toughness, teaches the value of hard work, and gives you the persistence you need in everyday life. Many members at 
-                            House of Dragons have said that Taekwondo is also a great stress-relief from school or work because it helps take their mind off problems they are 
-                            facing so they can focus all their thoughts into kicking the target in front of them. It is a workout where you have to have endurance to execute 
-                            all the various kicks and punches until the end of class. By engaging your brain during class, Taekwondo can help provide a completely different 
-                            workout that you won’t find anywhere else.</p>
-
-                        <h3>Discipline</h3>
-                        <p>In Taekwondo, students are taught how to help each other out in class. Whether that be to help hold boards to break or targets for you to kick 
-                        even to being sparring partners. By creating a bond of trust and reciprocation, you and your sparring partner can then practice various kicking
-                        combinations on each other and see how to make things work. Members at House of Dragons have become close friends and help
-                        each other reach their goals.</p>
                     </div>
 
                     <img className="right-image" src={require("../images/familyFriendly.jpg")} />

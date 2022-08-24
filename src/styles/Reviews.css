@@ -4,15 +4,16 @@
   grid-template-columns: 50% 50%;
   justify-items: center;
   margin-bottom: 5%;
+  box-sizing: border-box;
 }
 .reviews-title{
   text-align: center;
-  margin-top: 2%;
+  margin-top: 12vh;
   margin-bottom: 2%;
 }
 .card-footer{
   text-align: right;
 }
 .my-2{
-  width: 30rem;
+  width: 50%;
 }

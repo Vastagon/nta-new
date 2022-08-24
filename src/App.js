@@ -8,11 +8,13 @@ import Reviews from "./components/Reviews"
 import ContactUs from './components/ContactUs';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/App.css';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/programs" element={<Programs />} />
@@ -25,6 +27,7 @@ function App() {
           
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        </ScrollToTop>
       </Router>
       
 

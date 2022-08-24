@@ -1,12 +1,14 @@
 @media screen and (max-width: 950px) {
     /* Reviews */
     .reviews-container{
-        grid-template-columns: 40% 40%;
-        grid-gap: 10%;
-        margin-left: 10%;
+        grid-template-columns: 50% 50%; 
+        /* grid-gap: 10%; */
+        /* margin-left: 10%; */
         margin-top: 10vh;      
     }
-
+    .my-2{
+        width: 80%;
+    }
     /* Schedule */
     .mobile-schedule{
         width: 70%;
@@ -48,14 +50,26 @@
     /* Footer */
     footer{
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
+        padding-bottom: 5vh;
     }
     .footer-icon, .quick-links, .contact-us-footer-grid{
         text-align: center;
         left: 0;
         position: relative;
         height: auto;
-        padding-right: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .contactus-footer{
+        margin-top: 2%;
+    }
+    .quick-links{
+        margin-top: 2%;
+    }
+    .footer-icon{
+        padding-top: 15vh;
+        margin-left: 2%;
     }
     .quick-links > div, .contactus-footer{
         text-align: center;
