@@ -32,29 +32,27 @@ export default function AfterSchool(){
                         or learning forms all require a high degree of concentration. Students are sometimes surprised at how much faster they are able to focus their minds 
                         compared to when they started.</p>
                     </div>
-
-                    <img className="right-image" src={require("../images/familyFriendly.jpg")} />
+                    
+                    <img className="right-image" src={require("../images/smallFamilyFriendly.jpg")} />
                 </div>
-
+                
                 {/* Image on the left */}
                 <div className="image-segment">
                     <img className="right-image" src={require("../images/olympictaekwondo.jpg")} />
 
                     <div className="image-segment-text">
-                        {/* Needs Done */}
                         <h3>Stress Relief</h3>
-                        <p>Taekwondo helps build mental toughness, teaches the value of hard work, and gives you the persistence you need in everyday life. Many members at 
-                            House of Dragons have said that Taekwondo is also a great stress-relief from school or work because it helps take their mind off problems they are 
-                            facing so they can focus all their thoughts into kicking the target in front of them. It is a workout where you have to have endurance to execute 
-                            all the various kicks and punches until the end of class. By engaging your brain during class, Taekwondo can help provide a completely different 
-                            workout that you won’t find anywhere else.</p>
+                        <p>Working out has been scientifically proven to reduce an individual's stress. Being able to relieve this stress that
+                        might get built up from school or work allows them to refresh their minds to be ready for the next day of school or the 
+                        night of homework that may come afterwards. Being able to focus on the workout allows students to take their minds off off
+                        school or whatever else might be troubling them.</p>
 
-                        {/* Needs Done */}
-                        <h3>Self Defence</h3>
-                        <p>In Taekwondo, students are taught how to help each other out in class. Whether that be to help hold boards to break or targets for you to kick 
-                        even to being sparring partners. By creating a bond of trust and reciprocation, you and your sparring partner can then practice various kicking
-                        combinations on each other and see how to make things work. Members at House of Dragons have become close friends and help
-                        each other reach their goals.</p>
+                        <h3>Self Defense</h3>
+                        <p>The best form of self defense is learning how to avoid the fight. At NTA students learn how to assess situations
+                        and prevent or de-escalate them before the problem even begins. Taekwondo helps to build muscle mass and physical endurance.
+                        Learning about how the human body moves and understanding more about physical altercations allows students to learn how to best
+                        avoid these situations, as well as help them to understand the dangers of these threatening situations.
+                        </p>
                     </div>
                 </div>
 
@@ -68,16 +66,15 @@ export default function AfterSchool(){
                             all the various kicks and punches until the end of class. By engaging your brain during class, Taekwondo can help provide a completely different 
                             workout that you won’t find anywhere else.</p> */}
                             
-                        {/* Needs Done */}
 
                         <h3>Community</h3>
-                        <p>In Taekwondo, students are taught how to help each other out in class. Whether that be to help hold boards to break or targets for you to kick 
-                        even to being sparring partners. By creating a bond of trust and reciprocation, you and your sparring partner can then practice various kicking
-                        combinations on each other and see how to make things work. Members at House of Dragons have become close friends and help
-                        each other reach their goals.</p>
+                        <p>Communication and cooperation are key components taught in Taekwondo. Students learn how to help each other out
+                        in multiple aspects: they learn how to explain techniques, how to hold boards and targets for their partners, and how
+                        to spar while learning from it without injuries. Learning how to work with partners and building that trust in each other
+                        lets both memebers work towards their goals together, letting everyone succeed.</p>
                     </div>
-
-                    <img className="right-image" src={require("../images/smallFamilyFriendly.jpg")} />
+                    {/* smallFamilyFriendly.jpg */}
+                    <img className="right-image" src={require("../images/familyFriendly.jpg")} />
                 </div>
 
             </div>

@@ -16,6 +16,12 @@
   top: 0;
   left: 0;
 }
+/* Colors */
+/*
+  #008000
+  
+*/
+
 
 /* Navbar */
 .bottom-nav{
@@ -142,6 +148,8 @@
 }
 .home-title{
   text-align: center;
+  position: relative;
+  margin-top: 2%;
 }
 .home-content{
   text-align: center;
@@ -288,7 +296,7 @@ footer{
 }
 .footer-segment{
   color: white;
-  margin-top: 8%;
+  margin-top: 10%;
   height: 100%;
 }
 .facebook-icon{
@@ -347,7 +355,7 @@ footer{
 }
 .footer-icon{
   height: 60%;
-  margin-left: -10%;
+  margin-left: -5%;
   margin-right: 2rem;
   padding-left: 6rem;
 }

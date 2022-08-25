@@ -76,3 +76,10 @@
     }
 }
 
+
+
+@media screen and (max-width: 1200px) {
+    .footer-segment > h2, .contact-us-footer-grid > h2{
+        font-size: 1.6rem;
+    }
+}
