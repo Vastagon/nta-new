@@ -20,7 +20,7 @@
         .mobile-schedule-day-container{
         text-align: left;
         padding-bottom: 2rem;
-        background-color: black;
+        background-color: var(--scheme-black);
         color: white;
     
         border-radius: 10px;

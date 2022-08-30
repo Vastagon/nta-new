@@ -12,6 +12,10 @@
   border-width: 2px;
   margin-left: 5%;
 }
+.contact-form{
+  width: 25%;
+  border-color: var(--scheme-gray) !important;
+}
 .contact-input > form > input{
   margin-top: 1rem;
   width: 80%;
@@ -23,7 +27,7 @@
   margin-top: 2rem;
 }
 .contact-input-title{
-  color: black;
+  color: var(--scheme-black);
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
@@ -37,7 +41,9 @@
   gap: 5%;
 }
 .contactus-card{
-  border-color:  black;
+  /* border-color:  #123245; */
+  border: var(--bs-card-border-width) solid var(--scheme-gray) !important;
+  border-color: var(--scheme-gray);
   background-color: lightgray;
   border-style: solid;
   border-width: 1px;

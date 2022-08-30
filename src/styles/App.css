@@ -4,7 +4,15 @@
   /* FEFFFF */
   /* F7F9FB */
   --navbar-color: #F7F9FB;
-  color: black;
+  --scheme-black: #040F0F;
+  --scheme-white: #FFFFFF;
+  --scheme-gray: #BEBFC4;
+  --scheme-green: #183C28;
+  --scheme-yellow: #EEC643;
+  --nta-green: #145434; 
+  --nta-green2: #185434;
+
+  color: var(--scheme-black);
   background-color: #FEFFFF;
   /* F7F9FB */
   font-family: 'Roboto', sans-serif;
@@ -19,6 +27,13 @@
 /* Colors */
 /*
   #008000
+
+  Pallete:
+  #040F0F
+  #FFFFFF
+  #BEBFC4
+  #183C28
+  #EEC643
   
 */
 
@@ -49,12 +64,12 @@
   display: flex;
   z-index: 10;
 
-  /* border-top: 0;
+  border-top: 0;
   border-left: 0;
   border-right: 0;
   border-bottom: 1px;
-  border-color: black;
-  border-style: solid; */
+  border-color: var(--scheme-black);
+  border-style: solid;
 }
 .nav-tab-container{
   display: flex;
@@ -64,7 +79,7 @@
 .nav-tab{
   margin-left: 1.5rem;
   opacity: 1;
-  color: black;
+  color: var(--scheme-black);
   opacity: .9;
   line-height: 10vh;
 }
@@ -114,8 +129,8 @@
   border-style: solid;
   border-radius: 25px;
   margin-top: 10%;
-  background-color: black;
-  border-color: black;
+  background-color: var(--scheme-black);
+  border-color: var(--scheme-black);
 }
 
 @keyframes slide {
@@ -198,7 +213,7 @@
   border-right: 0px;
   border-left: 5px;
   border-bottom: 5px;
-  border-color: black;
+  border-color: var(--scheme-black);
   border-style: solid;
   z-index: 0;
   top: 42%;

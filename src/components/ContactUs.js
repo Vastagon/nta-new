@@ -23,7 +23,7 @@ export default function ContactUs(){
     const [formInput, setFormInput] = useState({})
 
     const [formCard, setFormCard] = useState(
-        <Form onSubmit={sendEmail} className="contact-form" style={{borderRadius: "10px", borderWidth: "1px", borderStyle: "solid", borderColor: "gray", padding: "1rem"}}>
+        <Form onSubmit={sendEmail} className="contact-form" style={{borderRadius: "10px", borderWidth: "1px", borderStyle: "solid", padding: "1rem"}}>
         <FormGroup>
             <Label for="name">Name</Label>
             <Input 
@@ -150,7 +150,7 @@ export default function ContactUs(){
                     <div>(972) 471-2333</div>
                 </div>
             </div> */}
-        <Card>
+        <Card className="contactus-card">
             <CardTitle style={{padding: "0", paddingTop: "15%"}} tag="h5">Contact Us</CardTitle>
             {/* <CardSubtitle className="mb-2 text-muted" tag="h6" >Card subtitle</CardSubtitle> */}
         <CardBody>

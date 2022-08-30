@@ -11,8 +11,11 @@
   display: grid;
   grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
 }
+.day:nth-child(odd){
+  background-color: var(--nta-green);
+}
 .day{
-  background-color: black;
+  background-color: var(--scheme-green);
   border-width: 2px;
   border-color: white;
   border-style: solid;
@@ -26,7 +29,6 @@
 .schedule-row:nth-child(7n-6){
   border-radius: 20px 0 0 20px;
   border-style: none;
-
 }
 /* Right side curves */
 .schedule-row:nth-child(7n){
@@ -43,32 +45,43 @@
 .schedule-row:nth-child(n){
   border-right: 0;
 }
-.schedule-row:nth-child(7n){
+
+
+/* .schedule-row:nth-child(7n){
   border-left: 1px;
   border-style: solid;
-  border-color: black;
-}
+  border-color: var(--scheme-gray);
+} */
 
 .schedule-row{
   line-height: 10vh;
-  background-color: #565656;
+  background-color: var(--scheme-green);
+  /* background-color: #565656; */
+  color: var(--scheme-white);
   height: 10vh;
-  border-left: 1px;
+  /* border-left: 1px;
   border-right: 1px;
   border-top: 0;
   border-bottom: 0;
-  border-color: black;
-  border-style: solid;
+  border-color: var(--scheme-gray);
+  border-style: solid; */
   text-align: center;
 }
 .row2{
   /* background-color: #A9A9A9; */
   /* background-color: #D7CEC7; */
   /* background-color: #B37D4E; */
-  background-color: #1C393D;
-  background-color: rgba(28,57,61,.6)
-
+  /* background-color: #1C393D;
+  background-color: rgba(28,57,61,.6) */
+  background-color: var(--nta-green2);
 }
 .empty{
-  background-color: white;
+  background-color: white !important;
+}
+
+.row1:nth-child(even){
+  background-color: var(--nta-green) !important;
+}
+.row2:nth-child(odd){
+  background-color: var(--scheme-green);
 }

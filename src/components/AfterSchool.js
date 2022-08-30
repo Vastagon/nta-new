@@ -16,6 +16,7 @@ export default function AfterSchool(){
 
             <div className="children-classes">
                 <h2>Family Friendly</h2>
+                <div className="afterschool-underline"></div>
 
                 {/* Image on the Right */}
                 <div className="image-segment">
