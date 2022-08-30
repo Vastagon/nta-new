@@ -11,6 +11,7 @@
   display: grid;
   grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
 }
+/* Creates Checker Effect for top line */
 .day:nth-child(odd){
   background-color: var(--nta-green);
 }
@@ -36,15 +37,15 @@
   border-left: 2px;
   border-style: none;
 }
-
+/* 
 .day:nth-child(n+1){
   border-left: 0;
-}
+} */
 
 /* Removes double border lines in schedule */
-.schedule-row:nth-child(n){
+/* .schedule-row:nth-child(n){
   border-right: 0;
-}
+} */
 
 
 /* .schedule-row:nth-child(7n){

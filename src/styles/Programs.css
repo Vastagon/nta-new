@@ -34,6 +34,7 @@
   padding-right: 1rem;
   padding-bottom: 1rem;
   font-size: .9rem;
+  color: var(--text-color-black);
 }
 .card-img{
   padding: 0;

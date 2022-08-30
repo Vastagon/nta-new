@@ -11,8 +11,9 @@
   --scheme-yellow: #EEC643;
   --nta-green: #145434; 
   --nta-green2: #185434;
+  --text-color-black: #555555;
 
-  color: var(--scheme-black);
+  color: var(--scheme-gray);
   background-color: #FEFFFF;
   /* F7F9FB */
   font-family: 'Roboto', sans-serif;
@@ -170,6 +171,7 @@
   text-align: center;
   padding-left: 20%;
   padding-right: 20%;
+  color: var(--text-color-black);
 }
 .features{
   width: 70%;
