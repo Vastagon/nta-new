@@ -80,9 +80,9 @@
   background-color: white !important;
 }
 
-.row1:nth-child(even){
+.row1:nth-child(odd){
   background-color: var(--nta-green) !important;
 }
-.row2:nth-child(odd){
+.row2:nth-child(even){
   background-color: var(--scheme-green);
 }
