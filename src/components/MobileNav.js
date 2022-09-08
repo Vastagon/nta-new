@@ -6,7 +6,7 @@ export default function MobileNav(){
 
 
     return(
-        <div className="mobile-nav">
+        <div style={{height: "100vh"}} className="mobile-nav">
             <div onClick={() => navigate("/programs")} className="mobile-nav-tab">Programs</div>
             {/* <div onClick={() => navigate("/specialoffers")} className="mobile-nav-tab">Special Offers</div> */}
             <div onClick={() => navigate("/schedule")} className="mobile-nav-tab">Schedule</div>

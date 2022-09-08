@@ -261,5 +261,60 @@
       padding-right: 1rem;
       margin-left: 0;
     }
+    .footer-segment{
+      margin-top: 8%;
+    }
   }
   
+
+
+
+/* Mobile Turned Sideways */
+@media screen and (orientation: landscape) {
+  /* Navbar */
+  .hamburger-nav{
+    top: 1vh;
+  }
+  .hamburger-line{
+    border-width: .4ex;
+    margin-top: 7%;
+    width: 5vw;
+  }
+  .mobile-nav{
+    height: 100vh !important;
+  }
+  .mobile-nav-tab{
+    margin-top: 5%;
+  }
+  .mobile-nav-tab:nth-child(1){
+    margin-top: 10%;
+  }
+
+
+  /* Contact Us */
+  .contact-form{
+    width: 40%;
+    margin-right: 4%;
+  }
+  .contactus-card{
+    margin-left: 4%;
+  }
+
+
+
+  /* Schedule */
+  .mobile-schedule-day-container{
+    margin-top: 5%;
+  }
+  .schedule-title{
+    margin-top: 7%;
+  }
+
+
+
+  /* Programs */
+  .card-group{
+    flex-flow: column !important;
+    flex-direction: column !important;
+  }
+}

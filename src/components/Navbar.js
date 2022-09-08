@@ -39,7 +39,7 @@ export default function Navbar(){
     return(
         <div className="mynav">
             <div onClick={() => navigate("/")} className="icon nav-tab">NTA</div>
-            {window.innerWidth <= 550 ? 
+            {window.innerWidth <= 550 || window.innerHeight < 425? 
             // Mobile Navbar
             <div id="hamburger-nav" onClick={openMobileNav} className="hamburger-nav">
                 <div className="hamburger-line"></div>
