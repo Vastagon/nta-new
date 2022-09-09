@@ -35,12 +35,22 @@
     .mobile-schedule-day-container{
     text-align: left;
     padding-bottom: 2rem;
-    background-color: var(--scheme-black);
+    background-color: var(--scheme-green);
     color: white;
     margin-top: 5%;
 
     border-radius: 10px;
     }
+    .mobile-schedule-day-container:nth-child(odd){
+        background-color: var(--nta-green);
+      }
+    /* .mobile-times-grid{
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    } */
+
+    
     .mobile-schedule-day-container > h4{
     text-align: left;
     padding-left: 5%;
