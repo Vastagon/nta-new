@@ -10,14 +10,21 @@ export default function Schedule(){
     const [screenHeight, setScreenHeight] = useState()
 
     useEffect(() =>{
-        console.log("HEre")
+        setScreenWidth(window.innerWidth)
+        setScreenHeight(window.innerHeight)
+
+
         window.addEventListener("resize", () =>{
             setScreenWidth(window.innerWidth)
             setScreenHeight(window.innerHeight)
         })
     }, [])
 
+
+    if(!screenHeight || !screenWidth) return null
+
     return(
+
         <div className="schedule page">
             <Navbar />
             <h1 className="schedule-title">Schedule</h1>
@@ -31,5 +38,6 @@ export default function Schedule(){
             <Footer />
 
         </div>
+
     )
 }

@@ -334,8 +334,17 @@
 
   /* Programs */
   .card-group{
-    flex-flow: column;
+    flex-flow: column !important;
     flex-direction: column;
+    width: auto;
+  }
+  .card-body{
+
+  }
+  .card-img{
+    margin-left: 10%;
+    width: 80% !important;
+    height: 90vh !important;
   }
 
 
