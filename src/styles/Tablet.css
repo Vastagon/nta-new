@@ -6,13 +6,18 @@
 
     /* Reviews */
     .reviews-container{
-        grid-template-columns: 50% 50%; 
-        /* grid-gap: 10%; */
-        /* margin-left: 10%; */
+        grid-template-columns: 100%; 
         margin-top: 10vh;      
     }
     .card-group{
         width: 100vw;
+        flex-flow: column nowrap;
+    }
+    .card-title{
+        font-size: 1.8rem;
+    }
+    .card-text{
+        font-size: 1.4rem;
     }
     .my-2{
         width: 80%;

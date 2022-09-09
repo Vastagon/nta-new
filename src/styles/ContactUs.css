@@ -13,8 +13,8 @@
   margin-left: 5%;
 }
 .contact-form{
-  width: 25%;
   border-color: var(--scheme-gray) !important;
+  width: 33%;
 }
 .contact-input > form > input{
   margin-top: 1rem;
@@ -31,8 +31,6 @@
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
-
-/* Contact Us */
 .contact-us{
   display: flex;
   justify-content: center;
