@@ -109,7 +109,7 @@
   color: white;
 
   animation-name: slide;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 .mobile-nav-tab{
   text-align: center;
@@ -215,7 +215,7 @@
   border-right: 0px;
   border-left: 5px;
   border-bottom: 5px;
-  border-color: var(--scheme-black);
+  border-color: var(--nta-green);
   border-style: solid;
   z-index: 0;
   top: 42%;

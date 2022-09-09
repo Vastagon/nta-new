@@ -128,7 +128,7 @@
     .mobile-schedule-day-container{
       text-align: left;
       padding-bottom: 2rem;
-      background-color: var(--scheme-black);
+      background-color: var(--scheme-green);
       color: white;
       margin-top: 10%;
 
@@ -147,7 +147,11 @@
       border-style: solid;
       margin-bottom: 0;
     }
+    .mobile-schedule-day-container:nth-child(odd){
+      background-color: var(--nta-green);
+    }
     .mobile-times-grid{
+      margin-top: 2%;
       display: grid;
       grid-template-columns: 40% 60%;
     }
@@ -269,6 +273,13 @@
 
 
 
+
+
+
+
+
+
+
 /* Mobile Turned Sideways */
 @media screen and (orientation: landscape) {
   /* Navbar */
@@ -305,16 +316,31 @@
   /* Schedule */
   .mobile-schedule-day-container{
     margin-top: 5%;
+    background-color: var(--scheme-green);
   }
   .schedule-title{
     margin-top: 7%;
+  }
+  .mobile-schedule-day-container:nth-child(odd){
+    background-color: var(--nta-green);
+  }
+  .mobile-times-grid{
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 40% 60%;
   }
 
 
 
   /* Programs */
   .card-group{
-    flex-flow: column !important;
-    flex-direction: column !important;
+    flex-flow: column;
+    flex-direction: column;
+  }
+
+
+
+  .home-image{
+    margin-top: -4.5%;
   }
 }

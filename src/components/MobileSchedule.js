@@ -54,6 +54,18 @@ export default function MobileSchedule(){
                 </div>
             </div>
 
+            {/* Saturday */}
+            <div className="mobile-schedule-day-container">
+                <h4>Saturday</h4>
+                <div className="mobile-times-grid">
+                    <p>5-6</p>
+                    <p>Taekwondo</p>
+
+                    <p>6:30-7:30</p>
+                    <p>Daedo Sparring</p>
+                </div>
+            </div>
+
         </div>
     )
 }

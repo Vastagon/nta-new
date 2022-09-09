@@ -3,13 +3,18 @@ import DesktopSchedule from "./DesktopSchedule";
 import MobileSchedule from "./MobileSchedule";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-// import "../styles/Schedule.css"
 
 
 export default function Schedule(){
     const [screenWidth, setScreenWidth] = useState()
+    const [screenHeight, setScreenHeight] = useState()
+
     useEffect(() =>{
-        setScreenWidth(window.innerWidth)
+        console.log("HEre")
+        window.addEventListener("resize", () =>{
+            setScreenWidth(window.innerWidth)
+            setScreenHeight(window.innerHeight)
+        })
     }, [])
 
     return(
@@ -17,10 +22,10 @@ export default function Schedule(){
             <Navbar />
             <h1 className="schedule-title">Schedule</h1>
 
-            {screenWidth > 800 ?
-                <DesktopSchedule />
-            :
+            {screenWidth > screenHeight || (screenWidth < screenHeight && screenWidth < 575)?
                 <MobileSchedule />
+            :
+                <DesktopSchedule />
             }
 
             <Footer />

@@ -49,9 +49,9 @@ export default function Programs(){
                     />
                     <CardTitle>Children's Classes</CardTitle>
 
-                    <CardText>Martial arts aren't all about punching and kicking. At NTA, we focus more on the personal-development aspects
+                    <CardText>Martial arts aren't all about punching and kicking. At NTA, we  also focus on the personal-development aspects
                         that Taekwondo offers. Things like improving focus, instilling a sense of discipline, getting fit, 
-                        and increasing confidence</CardText>
+                        and increasing confidence.</CardText>
                 </CardBody>
             </Card>
                 </CardGroup>

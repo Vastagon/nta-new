@@ -24,14 +24,14 @@ export default function Navbar(){
     let openMobileNav = () =>{
         setShowMobileNav(prev => !prev)
 
+        //Hides hamburger nav when slide out animation is playing
         if(!showMobileNav){
             document.getElementById("hamburger-nav").classList.add("hidden")
 
             setTimeout(() =>{
                 document.getElementById("hamburger-nav").classList.remove("hidden")
-            }, 1500)
+            }, 1000)
         }
-
     }
 
     
@@ -56,8 +56,8 @@ export default function Navbar(){
                 <div onClick={() => navigate("/contactus")} className="contactus-tab nav-tab">Contact Us</div>
             </div>
             }
-            {showMobileNav ? <MobileNav /> : null}
 
+            {showMobileNav ? <MobileNav /> : null}
         </div>
     )
 }
