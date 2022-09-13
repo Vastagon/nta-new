@@ -39,15 +39,13 @@
   gap: 5%;
 }
 .contactus-card{
-  /* border-color:  #123245; */
-  border: var(--bs-card-border-width) solid var(--scheme-gray) !important;
   border-color: var(--scheme-gray);
   border-style: solid;
   border-width: 1px;
-  /* background-color: #397754; */
   border-radius: 10px;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-top: 5%;
 }
 .contactus-card > h4{
   font-size: 1.6rem;

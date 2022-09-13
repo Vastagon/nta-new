@@ -141,21 +141,26 @@ export default function ContactUs(){
         <Navbar />
 
 
-
         <div className="contact-us page">
-            
-            <div className='contactus-card'>
+            {/* <div className='contactus-card'>
                 <h4>Contact Us</h4>
                 <div className='contact-info'>
                     <div>3000 Grapevine Mills Pkwy, Grapevine, Texas</div>
                     <div>ntataekwondo@gmail.com</div>
                     <div>(972) 471-2333</div>
                 </div>
-            </div>
-
+            </div> */}
+        <Card className="contactus-card">
+            <CardTitle style={{padding: "0", paddingTop: "15%"}} tag="h5">Contact Us</CardTitle>
+            {/* <CardSubtitle className="mb-2 text-muted" tag="h6" >Card subtitle</CardSubtitle> */}
+        <CardBody>
+            <CardText>3000 Grapevine Mills Pkwy, Grapevine, Texas</CardText>
+            <CardText>ntataekwondo@gmail.com</CardText>
+            <CardText>(972) 471-2333</CardText>
+        </CardBody>
+        </Card>
 
             {formCard}
-
 
             {currentlySendingEmail ? 
             <div className="spinner-container">
