@@ -39,7 +39,7 @@ export default function AfterSchool(){
                 
                 {/* Image on the left */}
                 <div className="image-segment">
-                    <img className="right-image" src={require("../images/olympictaekwondo.jpg")} />
+                    <img className="right-image" src={require("../images/olympictaekwondo.webp")} />
 
                     <div className="image-segment-text">
                         <h3>Stress Relief</h3>

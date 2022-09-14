@@ -4,14 +4,14 @@ import WebsiteNavbar from "./Navbar";
 import AfterSchool from "./AfterSchool"
 import HomeBottomNav from "./HomeBottomNav";
 
-export default function Home(){
+export default function Home({imgs}){
 
 
     return(
         <div className="home page">
-            <WebsiteNavbar />
+            <WebsiteNavbar imgs={imgs}/>
             
-            <HomeSlider />
+            <HomeSlider imgs={imgs}/>
 
             {/* <img alt="not found" className="home-image" src={require('../images/crosstraining.jpg')} /> */}
             <h2 className="home-title">NTA Taekwondo</h2>

@@ -1,13 +1,22 @@
-import crossTrainingImage from "../sliderImages/crosstraining.webp"
-import bigBigImage from "../sliderImages/bigbig.jpg"
-import demoTeam from "../sliderImages/demoteam.jpeg"
+// import crossTrainingImage from "../sliderImages/crosstraining.webp"
+// import bigBigImage from "../sliderImages/bigbig.jpg"
+// import demoTeam from "../sliderImages/demoteam.jpeg"
 import { useEffect, useState } from "react"
 
 
-export default function HomeSlider(){
-    let imageArray = [crossTrainingImage, bigBigImage, demoTeam]
+export default function HomeSlider({imgs}){
+    const [imgSlider, setImageSlider] = useState()
+    // let imageArray = [crossTrainingImage, bigBigImage, demoTeam]
     let [imageArrayPosition, setImageArrayPosition] = useState(0)
     let [isAnimationRunning, setIsAnimationRunning] = useState(false)
+
+    useEffect(() =>{
+        setImageSlider([
+            imgs.crossTrainingImage,
+            imgs.bigBigImage,
+            imgs.demoTeam
+        ])
+    }, [])
 
     function arrowClicked(moveThroughArray){
         setIsAnimationRunning(true)
@@ -48,26 +57,27 @@ export default function HomeSlider(){
     ///Loops imageArrayPosition to ends of the array
     useEffect(() =>{
         if(imageArrayPosition < 0){
-            setImageArrayPosition(imageArray.length-1)
+            setImageArrayPosition(imgSlider?.length-1)
         }
-        if(imageArrayPosition >= imageArray.length){
+        if(imageArrayPosition >= imgSlider?.length){
             setImageArrayPosition(0)
         }    
     }, [imageArrayPosition])
 
+    if(!imgSlider) return null
 
     return(
         <>
          {isAnimationRunning ? 
             <div className="slider">
                 <div id="slider-left-arrow" className="slider-left-arrow slider-arrow"></div>
-                <img id="home-slider-image" className="slider-image-initial" alt="not found" src={imageArray[imageArrayPosition]} />
+                <img id="home-slider-image" className="slider-image-initial" alt="not found" src={imgSlider[imageArrayPosition]} />
                 <div id="slider-right-arrow" className="slider-right-arrow slider-arrow"></div>
             </div>
         :
             <div className="slider">
                 <div id="slider-left-arrow" onClick={() => arrowClicked(-1)} className="slider-left-arrow slider-arrow"></div>
-                <img rel="preload" id="home-slider-image" className="slider-image-initial" alt="not found" src={imageArray[imageArrayPosition]} />
+                <img rel="preload" id="home-slider-image" className="slider-image-initial" alt="not found" src={imgSlider[imageArrayPosition]} />
                 <div id="slider-right-arrow" onClick={() => arrowClicked(1)} className="slider-right-arrow slider-arrow"></div>
             </div>
         }       

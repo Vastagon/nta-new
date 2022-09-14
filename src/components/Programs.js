@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-export default function Programs(){
+export default function Programs({imgs}){
 
     return(
         <>
@@ -12,7 +12,7 @@ export default function Programs(){
             <div className="programs page">
                 <div className="programs-card-container">
                     <div className="programs-card">
-                        <img rel="preload" alt="Card image cap" src={require("../images/traditional-program.webp")} />
+                        <img rel="preload" loading="lazy" alt="Card image cap" src={imgs.traditionalTaekwondo} />
                         <h4>Traditional Taekwondo</h4>
                         <p>Traditional Taekwondo is one of the most systematic and scientific Korean traditional martial arts, that teaches 
                         more than physical fighting skills. It is a discipline that shows ways of enhancing our spirit and life through training our body 
@@ -20,7 +20,7 @@ export default function Programs(){
                         NTA Taekwondo offers one of the highest level World Class Team Programs.</p>
                     </div>
                     <div className="programs-card">
-                        <img rel="preload" alt="Card image cap" src={require("../images/olympictaekwondo.webp")} />
+                        <img rel="preload" loading="lazy" alt="Card image cap" src={imgs.olympicTaekwondo} />
                         <h4>Team Program</h4>
                         <p>The Taekwondo team program is focused on the type sparring that is present in the Olympics.
                         It is for the students who want to compete in olympic-style sparring tournaments. Our sparring team competes in both local and
@@ -28,7 +28,7 @@ export default function Programs(){
 
                     </div>
                     <div className="programs-card">
-                        <img rel="preload" className="programs-last-image" alt="Card image cap" src={require("../images/kidsTraining.webp")} />
+                        <img rel="preload" loading="lazy" className="programs-last-image" alt="Card image cap" src={imgs.kidsTraining} />
                         <h4>Children's Classes</h4>
                         <p>Martial arts aren't all about punching and kicking. At NTA, we  also focus on the personal-development aspects
                         that Taekwondo offers. Things like improving focus, instilling a sense of discipline, getting fit, 

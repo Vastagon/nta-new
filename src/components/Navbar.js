@@ -13,13 +13,14 @@ import {useNavigate} from "react-router-dom"
 import {useState} from "react"
 import MobileNav from "./MobileNav"
 
+import NTALogo from "../images/NTALogo2.webp"
+
 
 
 
 export default function Navbar(){
     let [showMobileNav, setShowMobileNav] = useState(false)
     let navigate = useNavigate()
-
 
     let openMobileNav = () =>{
         setShowMobileNav(prev => !prev)
@@ -34,11 +35,11 @@ export default function Navbar(){
         }
     }
 
-    
 
     return(
         <div className="mynav">
-            <div onClick={() => navigate("/")} className="icon nav-tab">NTA</div>
+            {/* <div onClick={() => navigate("/")} className="icon nav-tab">NTA</div> */}
+            <img onClick={() => navigate("/")} src={NTALogo} className="icon nav-tab" />
             {window.innerWidth <= 550 || window.innerHeight < 425? 
             // Mobile Navbar
             <div id="hamburger-nav" onClick={openMobileNav} className="hamburger-nav">

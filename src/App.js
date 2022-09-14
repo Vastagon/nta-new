@@ -9,35 +9,38 @@ import ContactUs from './components/ContactUs';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/App.css';
 import ScrollToTop from './components/ScrollToTop';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import crossTrainingImage from "./sliderImages/crosstraining.webp"
 import bigBigImage from "./sliderImages/bigbig.jpg"
 import demoTeam from "./sliderImages/demoteam.jpeg"
 import kidsTraining from "./images/kidsTraining.webp"
-import olympictaekwondo from "./images/olympictaekwondo.webp"
+import olympicTaekwondo from "./images/olympictaekwondo.webp"
 import NTALogo from "./images/NTALogo2.webp"
-import TraditionalTaekwondo from "./images/traditional-program.webp"
+import traditionalTaekwondo from "./images/traditional-program.webp"
 
 function App() {
+  const [imgs, setImgs] = useState();
 
   useEffect(() =>{
-    const imgs = [
-      crossTrainingImage,
-      bigBigImage,
-      demoTeam,
-      kidsTraining,
-      olympictaekwondo,
-      NTALogo,
-      TraditionalTaekwondo,
-      "https://louisville.edu/english/images/facebookicon.png/image"
-    ]
+    setImgs(
+      {
+        crossTrainingImage: crossTrainingImage,
+        bigBigImage: bigBigImage,
+        demoTeam: demoTeam,
+        kidsTraining: kidsTraining,
+        olympicTaekwondo: olympicTaekwondo,
+        NTALogo: NTALogo,
+        traditionalTaekwondo: traditionalTaekwondo,
+        facebookIcon: "https://louisville.edu/english/images/facebookicon.png/image"
+      }
+    )
 
     cacheImages(imgs)
   }, [])
 
   const cacheImages = async (srcArray) => {
-    const promises = await srcArray.map((src) =>{
+    const promises = await srcArray?.map((src) =>{
       return new Promise(function (resolve, reject) {
         const img = new Image()
 
@@ -50,19 +53,20 @@ function App() {
     await Promise.all(promises)
   }
 
+  if(!imgs) return null
 
   return (
     <div className="App">
       <Router>
         <ScrollToTop>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/specialoffers" element={<SpecialOffers />} />
-          <Route path="/schedule" element={<Schedule />} />
-          <Route path="/afterschool" element={<AfterSchool />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/" element={<Home imgs={imgs} />} />
+          <Route path="/programs" element={<Programs imgs={imgs} />} />
+          <Route path="/specialoffers" element={<SpecialOffers imgs={imgs} />} />
+          <Route path="/schedule" element={<Schedule imgs={imgs} />} />
+          <Route path="/afterschool" element={<AfterSchool imgs={imgs} />} />
+          <Route path="/reviews" element={<Reviews imgs={imgs} />} />
+          <Route path="/contactus" element={<ContactUs imgs={imgs} />} />
 
           
           <Route path="*" element={<ErrorPage />} />
