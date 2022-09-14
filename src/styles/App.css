@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap'); */
 
 :root{
   /* FEFFFF */
@@ -202,6 +202,8 @@
 }
 .slider-image-initial{
   border-radius: 30px;
+  width: auto;
+  height: auto;
 }
 .slider-image-initial{
   width: 100%;
@@ -318,6 +320,7 @@ footer{
 }
 .facebook-icon{
   width: 10%;
+  height: auto;
 }
 .facebook-icon:hover{
   cursor: pointer;
@@ -371,6 +374,7 @@ footer{
   transition-duration: .5s;
 }
 .footer-icon{
+  width: auto;
   height: 60%;
   margin-left: -5%;
   margin-right: 2rem;

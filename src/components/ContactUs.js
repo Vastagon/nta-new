@@ -9,12 +9,6 @@ import {
     Input,
     FormGroup,
     Button,
-    Card,
-    CardBody,
-    CardText,
-    CardTitle,
-    CardSubtitle,
-    CardLink
 } from "reactstrap"
 
 

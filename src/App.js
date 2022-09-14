@@ -9,8 +9,48 @@ import ContactUs from './components/ContactUs';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/App.css';
 import ScrollToTop from './components/ScrollToTop';
+import { useEffect } from 'react';
+
+import crossTrainingImage from "./sliderImages/crosstraining.webp"
+import bigBigImage from "./sliderImages/bigbig.jpg"
+import demoTeam from "./sliderImages/demoteam.jpeg"
+import kidsTraining from "./images/kidsTraining.webp"
+import olympictaekwondo from "./images/olympictaekwondo.webp"
+import NTALogo from "./images/NTALogo2.webp"
+import TraditionalTaekwondo from "./images/traditional-program.webp"
 
 function App() {
+
+  useEffect(() =>{
+    const imgs = [
+      crossTrainingImage,
+      bigBigImage,
+      demoTeam,
+      kidsTraining,
+      olympictaekwondo,
+      NTALogo,
+      TraditionalTaekwondo,
+      "https://louisville.edu/english/images/facebookicon.png/image"
+    ]
+
+    cacheImages(imgs)
+  }, [])
+
+  const cacheImages = async (srcArray) => {
+    const promises = await srcArray.map((src) =>{
+      return new Promise(function (resolve, reject) {
+        const img = new Image()
+
+        img.src = src
+        img.onload = resolve()
+        img.onerror = reject()
+      })      
+    })
+
+    await Promise.all(promises)
+  }
+
+
   return (
     <div className="App">
       <Router>

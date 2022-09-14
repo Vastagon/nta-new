@@ -1,4 +1,4 @@
-import crossTrainingImage from "../sliderImages/crosstraining.jpg"
+import crossTrainingImage from "../sliderImages/crosstraining.webp"
 import bigBigImage from "../sliderImages/bigbig.jpg"
 import demoTeam from "../sliderImages/demoteam.jpeg"
 import { useEffect, useState } from "react"
@@ -67,7 +67,7 @@ export default function HomeSlider(){
         :
             <div className="slider">
                 <div id="slider-left-arrow" onClick={() => arrowClicked(-1)} className="slider-left-arrow slider-arrow"></div>
-                <img id="home-slider-image" className="slider-image-initial" alt="not found" src={imageArray[imageArrayPosition]} />
+                <img rel="preload" id="home-slider-image" className="slider-image-initial" alt="not found" src={imageArray[imageArrayPosition]} />
                 <div id="slider-right-arrow" onClick={() => arrowClicked(1)} className="slider-right-arrow slider-arrow"></div>
             </div>
         }       
