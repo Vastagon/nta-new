@@ -6,7 +6,7 @@
     color: white;
     margin-left: 35%;
     margin-top: 10%;
-    margin-bottom: 15%;
+    margin-bottom: 7.5%;
     border-radius: 30px 0 0 30px;
 }
 .overview> h2{
@@ -21,9 +21,9 @@
 
 
 
-.children-classes{
+.afterschool-content{
     /* background-color: #A9A9A9; */
-    background-color: #7c7c7c;
+    /* background-color: #7c7c7c; */
     /* background-image: linear-gradient(#145434, #185434); */
     background-image: linear-gradient(var(--nta-green), var(--scheme-green));
 
@@ -33,7 +33,7 @@
     border-radius: 20px;
     margin-bottom: 5%;
 }
-.children-classes > h2{
+.afterschool-content > h2{
     padding-left: 2rem;
     padding-top: 2rem;
 }
@@ -72,7 +72,7 @@
     .image-segment-text > h3, .overview > h2{
         font-size: 4rem;
     }
-    .children-classes > h2{
+    .afterschool-content > h2{
         font-size: 6rem;
     }
 }

@@ -3,6 +3,10 @@ import HomeSlider from "./HomeSlider";
 import WebsiteNavbar from "./Navbar";
 import AfterSchool from "./AfterSchool"
 import HomeBottomNav from "./HomeBottomNav";
+import Programs from "./Programs"
+import Schedule from "./Schedule"
+import Reviews from "./Reviews"
+import ContactUs from "./ContactUs"
 
 export default function Home({imgs}){
 
@@ -29,7 +33,10 @@ export default function Home({imgs}){
             </div> */}
 
             <AfterSchool />
-         
+            <Programs imgs={imgs} />
+            <Schedule />
+            <Reviews />
+            <ContactUs />
 
             {/* <HomeBottomNav /> */}
             <Footer />

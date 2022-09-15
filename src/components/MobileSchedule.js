@@ -1,7 +1,7 @@
 
 export default function MobileSchedule(){
     return(
-        <div className="mobile-schedule">
+        <div id="scheduleScroll" className="mobile-schedule">
 
             {/* Monday */}
             <div className="mobile-schedule-day-container">
@@ -66,6 +66,7 @@ export default function MobileSchedule(){
                 </div>
             </div>
 
+            <div id="reviewsScroll"></div>
         </div>
     )
 }

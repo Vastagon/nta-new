@@ -9,7 +9,7 @@ export default function Programs({imgs}){
 
             <h1 className="programs-header">Programs</h1>
 
-            <div className="programs page">
+            <div  className="programs page">
                 <div className="programs-card-container">
                     <div className="programs-card">
                         <img rel="preload" loading="lazy" alt="Card image cap" src={imgs.traditionalTaekwondo} />
@@ -34,10 +34,11 @@ export default function Programs({imgs}){
                         that Taekwondo offers. Things like improving focus, instilling a sense of discipline, getting fit, 
                         and increasing confidence.</p>
                     </div>
+            
                 </div>
-            </div>   
 
-            <Footer />     
+            </div>   
+            {/* <Footer />      */}
         </>
 
     )

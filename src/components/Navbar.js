@@ -9,7 +9,6 @@ import "../styles/Tablet.css"
 import "../styles/Mobile.css"
 
 
-import {useNavigate} from "react-router-dom"
 import {useState} from "react"
 import MobileNav from "./MobileNav"
 
@@ -20,7 +19,7 @@ import NTALogo from "../images/NTALogo2.webp"
 
 export default function Navbar(){
     let [showMobileNav, setShowMobileNav] = useState(false)
-    let navigate = useNavigate()
+    let appHeight = document.getElementById("app").offsetHeight
 
     let openMobileNav = () =>{
         setShowMobileNav(prev => !prev)
@@ -35,11 +34,24 @@ export default function Navbar(){
         }
     }
 
+    function clickScrollTo(position){
+        let element = document.getElementById(position)
+        let temp = element.offsetTop - element.scrollTop
+
+        ///Change amount of scroll if necessary
+        if(position === "scheduleScroll") temp = temp - (appHeight/32)
+        if(position === "programsScroll") temp = temp + (appHeight/100)
+
+        window.scrollTo(0, temp)
+    }
+
+
 
     return(
         <div className="mynav">
             {/* <div onClick={() => navigate("/")} className="icon nav-tab">NTA</div> */}
-            <img onClick={() => navigate("/")} src={NTALogo} className="icon nav-tab" />
+            <img onClick={() => clickScrollTo("root")} src={NTALogo} className="icon nav-tab" />
+
             {window.innerWidth <= 550 || window.innerHeight < 425? 
             // Mobile Navbar
             <div id="hamburger-nav" onClick={openMobileNav} className="hamburger-nav">
@@ -49,16 +61,14 @@ export default function Navbar(){
             </div>
             :             
             <div className="nav-tab-container">
-                <div onClick={() => navigate("/programs")} className="programs-tab nav-tab">Programs</div>
-                {/* <div onClick={() => navigate("/specialoffers")} className="special-offers-tab nav-tab">Special Offers</div> */}
-                <div onClick={() => navigate("/schedule")} className="schedule-tab nav-tab">Schedule</div>
-                {/* <div onClick={() => navigate("/afterschool")} className="afterschool-tab nav-tab">Afterschool</div> */}
-                <div onClick={() => navigate("/reviews")} className="reviews-tab nav-tab">Reviews</div>
-                <div onClick={() => navigate("/contactus")} className="contactus-tab nav-tab">Contact Us</div>
+                <div onClick={() => {clickScrollTo("programsScroll")}} className="programs-tab nav-tab">Programs</div>
+                <div onClick={() => {clickScrollTo("scheduleScroll")}} className="schedule-tab nav-tab">Schedule</div>
+                <div onClick={() => {clickScrollTo("reviewsScroll")}} className="reviews-tab nav-tab">Reviews</div>
+                <div onClick={() => {clickScrollTo("contactUsScroll")}} className="contactus-tab nav-tab">Contact Us</div>
             </div>
             }
 
-            {showMobileNav ? <MobileNav /> : null}
+            {showMobileNav ? <MobileNav clickScrollTo={clickScrollTo} /> : null}
         </div>
     )
 }

@@ -4,14 +4,25 @@
     .mynav{
       z-index: 5;
     }
-    .icon{
-      font-size: 1rem;
-      z-index: 5;
+    .mobile-nav{
+      display: flex;
+      flex-direction: column;
+      padding-top: 10%;
     }
     .nav-tab{
-      font-size: .5rem;
-      margin-left: 1rem;
+      font-size: 1rem;
+      margin-left: 0rem;
+      margin-top: 10%;
       opacity: 1;
+      color: white;
+
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .icon{
+      margin-top: 0;
+      margin-left: 1rem;
     }
     .hidden{
       display: none;
@@ -22,11 +33,11 @@
     .programs{
       flex-direction: column;
     }
-    .program-card{
-      width: 90%;
-      margin-top: 10%;
-
-      box-shadow: none;
+    .programs-card-container{
+      flex-direction: column;
+    }
+    .programs-card{
+      width: 100%;
     }
     .program-image{
       width: 80%;
@@ -63,7 +74,7 @@
       margin-left: 10%;
       width: 90%;
     }
-    .children-classes{
+    .afterschool-content{
       width: 90%;
       margin-left: 5%;
       margin-bottom: 8%;
@@ -178,7 +189,7 @@
     .slider{
       width: 100%;
       margin: 0;
-      margin-top: 5%;
+      margin-top: 25%;
       padding-bottom: 5%;
     }
     .slider-left-arrow{

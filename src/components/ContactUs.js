@@ -165,7 +165,7 @@ export default function ContactUs(){
             <iframe title="map" className="contactus-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.3640211944444!2d-97.04233204873952!3d32.96779658144565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c2c0a6b0e1275%3A0x6a2f91f9df9415a2!2sNTA%20Taekwondo!5e0!3m2!1sen!2sus!4v1653548791280!5m2!1sen!2sus" width="600" height="450" loading="lazy"></iframe>
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
         </>
     )
 }

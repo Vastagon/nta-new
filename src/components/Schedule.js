@@ -24,7 +24,6 @@ export default function Schedule(){
         })
     }, [])
 
-    console.log(screenOrientation)
     if(!screenHeight || !screenWidth) return null
 
     return(
@@ -39,7 +38,7 @@ export default function Schedule(){
                 <DesktopSchedule />
             }
 
-            <Footer />
+            {/* <Footer /> */}
 
         </div>
 

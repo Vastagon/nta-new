@@ -2,7 +2,7 @@
 
 export default function DesktopSchedule(){
     return(
-        <div className="schedule-container">
+        <div id="scheduleScroll" className="schedule-container">
                 <div className="empty day"></div>
                 <div className="day">Monday</div>
                 <div className="day">Tuesday</div>
@@ -64,6 +64,7 @@ export default function DesktopSchedule(){
                 <div className="row2 schedule-row">Demo Team</div>
                 <div className="row2 schedule-row"></div>
                 <div className="row2 schedule-row"></div>
+                <div id="reviewsScroll"></div>
         </div>
     )
 }

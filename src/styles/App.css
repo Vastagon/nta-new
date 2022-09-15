@@ -2,7 +2,9 @@
   /* FEFFFF */
   /* F7F9FB */
   --navbar-color: #F7F9FB;
-  --navbar-text: #199E2F;
+  --quick-links-text-color: #135344;
+  --navbar-text: #199E1B;
+  /* --navbar-text: #199E2F; */
   --scheme-black: #040F0F;
   --scheme-white: #FFFFFF;
   --scheme-gray: #BEBFC4;
@@ -58,7 +60,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--scheme-black);
+  background-color: black;
   height: 10vh;
   width: 100%;
   display: flex;
@@ -81,9 +83,9 @@
 .nav-tab{
   margin-left: 1.5rem;
   opacity: 1;
-  color: var(--navbar-text);
+  color: var(--quick-links-text-color);
   opacity: 1;
-  /* line-height: 10vh; */
+  font-size: 1.2rem;
 
   /* text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; */
 }
@@ -97,6 +99,9 @@
   margin-right: 20%;
   height: 80%;
   width: auto;
+  position: relative;
+
+  z-index: 0;
 }
 
 
@@ -135,8 +140,8 @@
   border-style: solid;
   border-radius: 25px;
   margin-top: 10%;
-  background-color: var(--scheme-black);
-  border-color: var(--scheme-black);
+  background-color: white;
+  border-color: white;
 }
 
 @keyframes slide {
@@ -360,7 +365,7 @@ footer{
   left: 33%;
 }
 .quick-links > div{
-  color: #135344;
+  color: var(--quick-links-text-color);
   margin-top: .5rem;
   text-align: left;
   opacity: 1;

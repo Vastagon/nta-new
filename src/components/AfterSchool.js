@@ -14,7 +14,7 @@ export default function AfterSchool(){
                     NTA has produced numerous regional, state and national champions.</p>
             </div>
 
-            <div className="children-classes">
+            <div className="afterschool-content">
                 <h2>Family Friendly</h2>
                 <div className="afterschool-underline"></div>
 
@@ -69,17 +69,18 @@ export default function AfterSchool(){
                             
 
                         <h3>Community</h3>
-                        <p>Communication and cooperation are key components taught in Taekwondo. Students learn how to help each other out
+                        <p >Communication and cooperation are key components taught in Taekwondo. Students learn how to help each other out
                         in multiple aspects: they learn how to explain techniques, how to hold boards and targets for their partners, and how
                         to spar while learning from it without injuries. Learning how to work with partners and building that trust in each other
                         lets both memebers work towards their goals together, letting everyone succeed.</p>
+                        {/* Div for Scrolling */}
+                        <div id="programsScroll"></div>
                     </div>
                     {/* smallFamilyFriendly.jpg */}
-                    <img className="right-image" src={require("../images/familyFriendly.jpg")} />
+                    <img  className="right-image" src={require("../images/familyFriendly.jpg")} />
                 </div>
 
             </div>
-
             {/* <Footer /> */}
         </div>
     )
