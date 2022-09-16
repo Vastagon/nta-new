@@ -42,6 +42,7 @@ export default function Navbar(){
         if(position === "scheduleScroll") temp = temp - (appHeight/32)
         if(position === "programsScroll") temp = temp + (appHeight/100)
         if(position === "overviewScroll") temp = temp + (appHeight/50)
+        if(position === "contactUsScroll") temp = temp - (appHeight/100)
 
         window.scrollTo(0, temp)
     }
@@ -53,7 +54,7 @@ export default function Navbar(){
             {/* <div onClick={() => navigate("/")} className="icon nav-tab">NTA</div> */}
             <img onClick={() => clickScrollTo("root")} src={NTALogo} className="icon nav-tab" />
 
-            {window.innerWidth <= 550 || window.innerHeight < 425? 
+            {window.innerWidth <= 950 || window.innerHeight < 425? 
             // Mobile Navbar
             <div id="hamburger-nav" onClick={openMobileNav} className="hamburger-nav">
                 <div className="hamburger-line"></div>

@@ -23,6 +23,29 @@
         width: 80%;
     }
 
+    .mynav{
+        z-index: 5;
+    }
+    .mobile-nav{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%;
+    }
+    .nav-tab{
+        font-size: 1rem;
+        margin-left: 0rem;
+        margin-top: 10%;
+        opacity: 1;
+        color: white;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .icon{
+        margin-top: 0;
+        margin-left: 1rem;
+    }
 
 
 
