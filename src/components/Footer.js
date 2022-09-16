@@ -1,7 +1,4 @@
-import {useNavigate} from "react-router-dom"
-
 export default function Footer(){
-    let navigate = useNavigate()
 
     return(
         <footer id="footer">
@@ -9,11 +6,11 @@ export default function Footer(){
             <div className="quick-links footer-segment">
                 <h2>Quick Links</h2>
 
-                <div onClick={() => navigate("/")}>Home</div>
-                <div onClick={() => navigate("/programs")}>Programs</div>
-                <div onClick={() => navigate("/schedule")}>Schedule</div>
-                <div onClick={() => navigate("/reviews")}>Reviews</div>
-                <div onClick={() => navigate("/contactus")}>Contact</div>
+                <div>Home</div>
+                <div>Programs</div>
+                <div>Schedule</div>
+                <div>Reviews</div>
+                <div>Contact</div>
             </div>
 
             <div className='contactus-footer footer-segment'>

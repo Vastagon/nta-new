@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import DesktopSchedule from "./DesktopSchedule";
 import MobileSchedule from "./MobileSchedule";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 
 
 export default function Schedule(){
@@ -29,7 +27,6 @@ export default function Schedule(){
     return(
 
         <div className="schedule page">
-            <Navbar />
             <h1 className="schedule-title">Schedule</h1>
 
             {screenWidth < screenHeight || (screenOrientation === "landscape-primary" && screenWidth < 800)?

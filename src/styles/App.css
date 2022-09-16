@@ -218,7 +218,8 @@
   width: auto;
   height: auto;
   max-height: 60vh;
-
+  position: relative;
+  z-index: 0;
 }
 .slider-arrow{
   position: absolute;

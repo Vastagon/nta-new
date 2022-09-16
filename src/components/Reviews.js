@@ -1,12 +1,8 @@
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-
 import ReviewsCard from "./ReviewsCard";
 
 export default function Reviews(){
     return(
         <div className="reviews page">
-            <Navbar />
             <h1 className="reviews-title">People Love our School</h1>
 
             <div className="reviews-container">

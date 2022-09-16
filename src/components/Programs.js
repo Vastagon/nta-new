@@ -5,8 +5,6 @@ export default function Programs({imgs}){
 
     return(
         <>
-            <Navbar />
-
             <h1 className="programs-header">Programs</h1>
 
             <div  className="programs page">

@@ -1,10 +1,8 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer"
+
 
 export default function AfterSchool(){
     return(
         <div className="after-school page">
-            <Navbar />
             <div className="overview">
                 <h2>Overview</h2>
                 <p>Taekwondo is a traditional Korean martial art, which means “the way of kicking and punching”. In taekwondo, hands and feet can be 
