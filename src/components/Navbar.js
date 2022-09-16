@@ -45,13 +45,17 @@ export default function Navbar(){
         if(position === "contactUsScroll") temp = temp - (appHeight/100)
 
         window.scrollTo(0, temp)
+
+        ///Remove mobile nav after click
+        if(showMobileNav){
+            setShowMobileNav(false)
+        }
     }
 
 
 
     return(
         <div className="mynav">
-            {/* <div onClick={() => navigate("/")} className="icon nav-tab">NTA</div> */}
             <img onClick={() => clickScrollTo("root")} src={NTALogo} className="icon nav-tab" />
 
             {window.innerWidth <= 950 || window.innerHeight < 425? 
