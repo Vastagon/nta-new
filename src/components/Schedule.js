@@ -11,18 +11,20 @@ export default function Schedule(){
     useEffect(() =>{
         setScreenWidth(window.innerWidth)
         setScreenHeight(window.innerHeight)
-        setScreenOrientation(window?.screen.orientation.type)
+        setScreenOrientation(window.screen.orientation.type)
 
         window.addEventListener("resize", () =>{
             setScreenWidth(window.innerWidth)
             setScreenHeight(window.innerHeight)
         })
         window.addEventListener("change", () =>{
-            setScreenOrientation(window?.screen.orientation.type)
+            setScreenOrientation("landscape-primary")
         })
     }, [])
 
-    if(!screenHeight || !screenWidth) return null
+    console.log(screenOrientation)
+
+    if(!screenHeight || !screenWidth || !screenOrientation) return null
 
     return(
 
