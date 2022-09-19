@@ -171,6 +171,15 @@
   margin-top: 0%;
   height: 90vh;
 }
+.home-container{
+  background-color: var(--nta-green);
+  border-radius: 30px;
+  border-style: none;
+  width: 80%;
+  margin-left: 10%;
+  color: white;
+  padding: 1rem;
+}
 .home-title{
   text-align: center;
   position: relative;
@@ -178,9 +187,9 @@
 }
 .home-content{
   text-align: center;
-  padding-left: 20%;
-  padding-right: 20%;
-  color: var(--text-color-black);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
 }
 .features{
   width: 70%;
