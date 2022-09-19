@@ -18,11 +18,9 @@ export default function Schedule(){
             setScreenHeight(window.innerHeight)
         })
         window.addEventListener("change", () =>{
-            setScreenOrientation("landscape-primary")
+            setScreenOrientation(window.screen.orientation.type)
         })
     }, [])
-
-    console.log(screenOrientation)
 
     if(!screenHeight || !screenWidth || !screenOrientation) return null
 
