@@ -215,7 +215,7 @@
 }
 .slider-image-initial{
   border-radius: 30px;
-  width: auto;
+  width: 100%;
   height: auto;
   max-height: 60vh;
   position: relative;
