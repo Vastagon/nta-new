@@ -131,6 +131,7 @@ export default function ContactUs(){
 
     return(
         <>
+        <h3 style={{textAlign: "center"}}>Give us your Information</h3>
             <div className="contact-us page">
                 <div className='contactus-card'>
                     <h4>Contact Us</h4>
