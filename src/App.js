@@ -23,7 +23,6 @@ function App() {
         olympicTaekwondo: olympicTaekwondo,
         NTALogo: NTALogo,
         traditionalTaekwondo: traditionalTaekwondo,
-        facebookIcon: "https://louisville.edu/english/images/facebookicon.png/image"
       }
     )
 

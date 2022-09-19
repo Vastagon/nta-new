@@ -2,18 +2,51 @@ import Footer from "./Footer";
 import HomeSlider from "./HomeSlider";
 import WebsiteNavbar from "./Navbar";
 import AfterSchool from "./AfterSchool"
-import HomeBottomNav from "./HomeBottomNav";
+// import HomeBottomNav from "./HomeBottomNav";
 import Programs from "./Programs"
 import Schedule from "./Schedule"
 import Reviews from "./Reviews"
 import ContactUs from "./ContactUs"
+import { useState } from "react";
 
 export default function Home({imgs}){
+    let [showMobileNav, setShowMobileNav] = useState(false)
 
+    function clickScrollTo(position){
+        let element = document.getElementById(position)
+        let temp = element.offsetTop - element.scrollTop
+
+        ///Change amount of scroll if necessary
+        // if(position === "scheduleScroll") temp = temp - (appHeight/32)
+        // if(position === "programsScroll") temp = temp + (appHeight/100)
+        // if(position === "overviewScroll") temp = temp + (appHeight/50)
+        // if(position === "contactUsScroll") temp = temp - (appHeight/100)
+        if(position === "programsScroll"){
+            temp = temp + 150
+            if(window.innerWidth < 1450){
+                temp = temp - 100
+            }
+        }
+        
+        
+
+        if(position === "overviewScroll") temp = temp + 100
+        if(position === "scheduleScroll") temp = temp - 180
+        if(position === "contactUsScroll") temp = temp - 100
+
+
+
+        window.scrollTo(0, temp)
+
+        ///Remove mobile nav after click
+        if(showMobileNav){
+            setShowMobileNav(false)
+        }
+    }
 
     return(
         <div className="home page">
-            <WebsiteNavbar imgs={imgs}/>
+            <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} imgs={imgs}/>
             
             <HomeSlider imgs={imgs}/>
 
@@ -34,7 +67,7 @@ export default function Home({imgs}){
             <ContactUs />
 
             {/* <HomeBottomNav /> */}
-            <Footer />
+            <Footer clickScrollTo={clickScrollTo}/>
         </div>
     )
 }

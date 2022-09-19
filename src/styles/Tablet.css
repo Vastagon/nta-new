@@ -141,6 +141,15 @@
     .overview{
         margin-top: 20%;
     }
+
+
+    /* Programs */
+    .programs-card-container{
+        flex-direction: column;
+    }
+    .programs-card{
+        width: 100%;
+    }
 }
 
 

@@ -112,7 +112,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 85%;
+  width: 79%;
   /* height: 100vh; */
   background-color: #0d482a;
   z-index: 4;
@@ -149,7 +149,7 @@
     height: 10000px;
   }
   100% { 
-    width: 85%; 
+    width: 79%; 
   }
 }
 
@@ -240,7 +240,7 @@
   border-bottom: 5px;
   border-color: var(--nta-green);
   border-style: solid;
-  z-index: 0;
+  z-index: 1;
   top: 42%;
   border-radius: 5px;
 }

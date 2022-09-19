@@ -9,7 +9,7 @@ import "../styles/Tablet.css"
 import "../styles/Mobile.css"
 
 
-import {useState} from "react"
+import {useEffect} from "react"
 import MobileNav from "./MobileNav"
 
 import NTALogo from "../images/NTALogo2.webp"
@@ -17,9 +17,11 @@ import NTALogo from "../images/NTALogo2.webp"
 
 
 
-export default function Navbar(){
-    let [showMobileNav, setShowMobileNav] = useState(false)
-    let appHeight = document.getElementById("app")?.offsetHeight
+export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav}){
+
+    // useEffect(() =>{
+    //     let appHeight = document.getElementById("app")?.offsetHeight
+    // }, [])
 
     let openMobileNav = () =>{
         setShowMobileNav(prev => !prev)
@@ -34,39 +36,8 @@ export default function Navbar(){
         }
     }
 
-    function clickScrollTo(position){
-        let element = document.getElementById(position)
-        let temp = element.offsetTop - element.scrollTop
 
-        ///Change amount of scroll if necessary
-        // if(position === "scheduleScroll") temp = temp - (appHeight/32)
-        // if(position === "programsScroll") temp = temp + (appHeight/100)
-        // if(position === "overviewScroll") temp = temp + (appHeight/50)
-        // if(position === "contactUsScroll") temp = temp - (appHeight/100)
-        if(position === "programsScroll"){
-            temp = temp + 150
-            if(window.innerWidth < 1450){
-                temp = temp - 100
-            }
-        }
-        
-        
-
-        if(position === "overviewScroll") temp = temp + 100
-        if(position === "scheduleScroll") temp = temp - 180
-        if(position === "contactUsScroll") temp = temp - 100
-
-
-
-        window.scrollTo(0, temp)
-
-        ///Remove mobile nav after click
-        if(showMobileNav){
-            setShowMobileNav(false)
-        }
-    }
-
-
+///if home id is clicked then setShowMobileNav to false
 
     return(
         <div className="mynav">
@@ -82,7 +53,7 @@ export default function Navbar(){
             :             
             <div className="nav-tab-container">
                 <div onClick={() => {clickScrollTo("programsScroll")}} className="programs-tab nav-tab">Programs</div>
-                <div onClick={() => {clickScrollTo("overviewScroll")}} className="programs-tab nav-tab">Overview</div>                
+                <div onClick={() => {clickScrollTo("overviewScroll")}} className="overview-tab nav-tab">Overview</div>                
                 <div onClick={() => {clickScrollTo("scheduleScroll")}} className="schedule-tab nav-tab">Schedule</div>
                 <div onClick={() => {clickScrollTo("reviewsScroll")}} className="reviews-tab nav-tab">Reviews</div>
                 <div onClick={() => {clickScrollTo("contactUsScroll")}} className="contactus-tab nav-tab">Contact Us</div>

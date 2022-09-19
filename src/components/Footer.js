@@ -1,4 +1,4 @@
-export default function Footer(){
+export default function Footer({clickScrollTo}){
 
     return(
         <footer id="footer">
@@ -6,11 +6,12 @@ export default function Footer(){
             <div className="quick-links footer-segment">
                 <h2>Quick Links</h2>
 
-                <div>Home</div>
-                <div>Programs</div>
-                <div>Schedule</div>
-                <div>Reviews</div>
-                <div>Contact</div>
+                <div onClick={() => {clickScrollTo("root")}}>Home</div>
+                <div onClick={() => {clickScrollTo("overviewScroll")}}>Overview</div>
+                <div onClick={() => {clickScrollTo("programsScroll")}}>Programs</div>
+                <div onClick={() => {clickScrollTo("scheduleScroll")}}>Schedule</div>
+                <div onClick={() => {clickScrollTo("reviewsScroll")}}>Reviews</div>
+                <div onClick={() => {clickScrollTo("contactUsScroll")}}>Contact</div>
             </div>
 
             <div className='contactus-footer footer-segment'>
