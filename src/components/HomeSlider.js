@@ -32,7 +32,7 @@ export default function HomeSlider({imgs}){
                 document.getElementById("home-slider-image").classList.remove("image-slide-right")
                 document.getElementById("home-slider-image").classList.add("image-slide-right-second")
                 setIsAnimationRunning(false)
-            }, 430)
+            }, 550)
         }else{
             ///Left Arrow Clicked
             document.getElementById("home-slider-image").classList.add("image-slide-left")
@@ -43,7 +43,7 @@ export default function HomeSlider({imgs}){
                 document.getElementById("home-slider-image").classList.remove("image-slide-left")
                 document.getElementById("home-slider-image").classList.add("image-slide-left-second")
                 setIsAnimationRunning(false)
-            }, 430)
+            }, 550)
         }
 
         ///Remove class for image slide on animation

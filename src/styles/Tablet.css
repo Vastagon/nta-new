@@ -131,19 +131,18 @@
 
 
 
-    /* Programs */
-    .programs-header{
-        margin-top: 17%;
-    }
-
-
     /* Afterschool */
     .overview{
         margin-top: 20%;
     }
 
 
+    
+
     /* Programs */
+    .programs-header{
+        margin-top: 17%;
+    }
     .programs-card-container{
         flex-direction: column;
     }

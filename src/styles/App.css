@@ -22,7 +22,7 @@
 }
 .App{
   position: absolute;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
 }
@@ -297,17 +297,17 @@
 /* Slide on Animations */
 @keyframes image-slide-left-second {
   0%{
-    transform: translateX(-50%);
+    transform: translateX(-21%);
     opacity: .1;
   }
-  100%{
+  100%{ /*50*/
     opacity: 1;
     transform: translateX(0%);
   }
 }
 @keyframes image-slide-right-second {
   0%{
-    transform: translateX(50%);
+    transform: translateX(21%);
     opacity: .1;
   }
   100%{
