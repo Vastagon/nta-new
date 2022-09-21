@@ -22,9 +22,9 @@
 }
 .App{
   position: absolute;
-  width: 100vw;
   top: 0;
   left: 0;
+  width: 100%;
 }
 /* Colors */
 /*
