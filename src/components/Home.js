@@ -2,7 +2,7 @@ import Footer from "./Footer";
 import HomeSlider from "./HomeSlider";
 import WebsiteNavbar from "./Navbar";
 import AfterSchool from "./AfterSchool"
-// import HomeBottomNav from "./HomeBottomNav";
+import HomeBottomNav from "./HomeBottomNav";
 import Programs from "./Programs"
 import Schedule from "./Schedule"
 import Reviews from "./Reviews"
@@ -66,7 +66,7 @@ export default function Home(){
             <Reviews />
             <ContactUs />
 
-            {/* <HomeBottomNav /> */}
+            <HomeBottomNav />
             <Footer clickScrollTo={clickScrollTo}/>
         </div>
     )
