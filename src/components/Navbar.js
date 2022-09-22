@@ -8,13 +8,9 @@ import "../styles/AfterSchool.css"
 import "../styles/Tablet.css"
 import "../styles/Mobile.css"
 
-
-import {useEffect} from "react"
 import MobileNav from "./MobileNav"
 
 import NTALogo from "../images/NTALogo2.webp"
-
-
 
 
 export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav}){
@@ -41,7 +37,7 @@ export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav})
 
     return(
         <div className="mynav">
-            <img onClick={() => clickScrollTo("root")} src={NTALogo} className="icon nav-tab" />
+            <img alt="Image not Found. Send help" onClick={() => clickScrollTo("root")} src={NTALogo} className="icon nav-tab" />
 
             {window.innerWidth <= 950 || window.innerHeight < 425? 
             // Mobile Navbar

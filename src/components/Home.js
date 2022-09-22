@@ -9,7 +9,7 @@ import Reviews from "./Reviews"
 import ContactUs from "./ContactUs"
 import { useState } from "react";
 
-export default function Home({imgs}){
+export default function Home(){
     let [showMobileNav, setShowMobileNav] = useState(false)
 
     function clickScrollTo(position){
@@ -46,9 +46,9 @@ export default function Home({imgs}){
 
     return(
         <div className="home page">
-            <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} imgs={imgs}/>
+            <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} />
             
-            <HomeSlider imgs={imgs}/>
+            <HomeSlider />
 
             <div className="home-container">
                 <h2 className="home-title">NTA Taekwondo</h2>
@@ -61,7 +61,7 @@ export default function Home({imgs}){
 
 
             <AfterSchool />
-            <Programs imgs={imgs} />
+            <Programs />
             <Schedule />
             <Reviews />
             <ContactUs />
