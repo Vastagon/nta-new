@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
 import * as emailjs from 'emailjs-com'
 
 import {

@@ -1,22 +1,44 @@
-import anime from "animejs"
-import { useEffect } from "react"
 import { useState } from "react"
+import * as emailjs from 'emailjs-com'
 
 
 export default function HomeBottomNav(){
     const [showBottomNav, setShowBottomNav] = useState(false)
+    const [bottomFormSendingEmail, setBottomFormSendingEmail] = useState(false)
+    const [bottomFormInfo, setBottomFormInfo] = useState()
 
+    function updateFormInfo(e){
+        setBottomFormInfo(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }))
+    }
+
+    function submitBottomForm(e){
+        e.preventDefault()
+        ///Uses emailjs to send email
+        setBottomFormSendingEmail(true)
+        emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, bottomFormInfo, process.env.REACT_APP_PUBLIC_KEY)
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            setBottomFormSendingEmail(false)
+            alert("Message Sent")
+            setBottomFormInfo({name: "", phone: "", email: ""})
+            // changeFormCard()
+
+        }, (err) => {
+            console.log('FAILED...', err);
+            setBottomFormSendingEmail(false)
+            alert("Error, message not sent")
+        });
+    }
+
+
+    console.log(bottomFormInfo)
     function toggleBottomNav(){
         setShowBottomNav(prev => !prev)
     }
-    
-    // useEffect(() =>{
-    //     if(!showBottomNav){
-    //         setTimeout(() =>{
 
-    //         }, 500)
-    //     }
-    // }, [showBottomNav])
     
     return(
         <>
@@ -29,15 +51,17 @@ export default function HomeBottomNav(){
                     {/* <img className="bottom-nav-arrow" /> */}
                 </div>
             </div>
-                <form className="bottom-nav-form">
+                <form onSubmit={submitBottomForm} onChange={updateFormInfo} className="bottom-nav-form">
                     <label for="bottom-nav-form-name">Name</label>
-                    <input id="bottom-nav-form-name" name="bottom-nav-form-name" />
+                    <input id="bottom-nav-form-name" name="name" />
                         <br></br>
                     <label for="bottom-nav-form-email">Email</label>
-                    <input id="bottom-nav-form-email" name="bottom-nav-form-email" />
+                    <input id="bottom-nav-form-email" name="email" />
                         <br></br>
                     <label for="bottom-nav-form-phone">Phone Number</label>
-                    <input id="bottom-nav-form-phone" name="bottom-nav-form-phone" />
+                    <input id="bottom-nav-form-phone" name="phone" />
+
+                    <button type="submit">Submit</button>
                 </form>      
             </>
             :
@@ -50,7 +74,14 @@ export default function HomeBottomNav(){
             </div>
             }  
 
-
+            {bottomFormSendingEmail ? 
+            <div className="spinner-container">
+                <div className="loading-spinner"></div>
+                <div className="loading-text">Don't leave this page</div>
+            </div>            
+            :
+            null
+            }   
         </>
 
 
