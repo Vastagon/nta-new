@@ -60,6 +60,10 @@
   height: 40%;
   border-radius: 20px;
 }
+.programs-card > h4{
+  margin-top: 1rem;
+  margin-left: .5rem;
+}
 .programs-card:nth-child(1){
   border-left: 0px;
 }

@@ -45,11 +45,12 @@
 /* Navbar */
 .bottom-nav{
   height: 10vh;
-  position: fixed;
-  bottom: 0;
+  position: fixed !important;
+  bottom: -20px;
   background-color: black;
   width: 100%;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   color: white;
@@ -57,12 +58,79 @@
   line-height: 10vh;
   z-index: 10;
 
-  border-top: 2px;
+  border-top: 3px;
   border-left: 0;
   border-right: 0;
-  border-bottom: 0;
+  border-bottom: 0px;
   border-style: solid;
   border-color: var(--quick-links-text-color);
+
+  /* border-bottom: 1px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-style: solid;
+  border-color: var(--nta-green2); */
+
+  /* animation: bottom-nav-slide-down 1s; */
+}
+.open-bottom-nav{
+  height: 80vh;
+  animation: bottom-nav-slide 1s;
+}
+.bottom-nav-text{
+  position: absolute;
+  top: 0%;
+  left: 0;
+  line-height: 300%;
+  text-align: center;
+  width: 100vw;
+  height: auto;
+}
+.bottom-nav-arrow{
+  width: auto;
+}
+.open-bottom-nav-arrow{
+  display: none;
+}
+@keyframes bottom-nav-slide {
+  0%{
+    height: 10vh;
+  }
+  100%{
+    height: 80vh;
+  }
+}
+@keyframes bottom-nav-slide-down {
+  0%{
+    height: 80vh;
+  }
+  100%{
+    height: 10vh;
+  }
+}
+@keyframes bottom-form-slide {
+  0%{
+    bottom: -20%;
+  }
+  100%{
+    bottom: 50%;
+  }
+}
+.bottom-nav-form{
+  position: fixed;
+  z-index: 100;
+  color: white;
+  background-color: green;
+  width: 80%;
+  margin-left: 10%;
+  padding: 2%;
+  bottom: 50%;
+
+  animation: bottom-form-slide 1s;
+}
+.show-hover:hover{
+  cursor: pointer;
 }
 .bottom-nav-arrow{
   height: 5vh;
@@ -163,6 +231,7 @@
     width: 79%; 
   }
 }
+
 
 
 

@@ -148,6 +148,16 @@
     }
     .programs-card{
         width: 100%;
+
+        border-top: 2px;
+        border-left: 0px;
+        border-right: 0;
+        border-bottom: 0;
+        border-color: gray;
+        border-style: solid;
+    }
+    .programs-card:nth-child(1){
+        border-style: none;
     }
 }
 
