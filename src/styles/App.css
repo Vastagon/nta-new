@@ -111,10 +111,10 @@
 }
 @keyframes bottom-form-slide {
   0%{
-    bottom: -20%;
+    bottom: -35%;
   }
   100%{
-    bottom: 50%;
+    bottom: 40%;
   }
 }
 .bottom-nav-form{
@@ -125,9 +125,20 @@
   width: 80%;
   margin-left: 10%;
   padding: 2%;
-  bottom: 50%;
+  bottom: 40%;
 
   animation: bottom-form-slide 1s;
+}
+.bottom-nav-form > label{
+  width: 100%;
+  text-align: center;
+}
+.bottom-nav-form > input{
+  width: 80%;
+  margin-left: 10%;
+}
+.bottom-nav-form > button{
+  padding: 2%;
 }
 .show-hover:hover{
   cursor: pointer;

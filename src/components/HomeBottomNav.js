@@ -53,14 +53,17 @@ export default function HomeBottomNav(){
             </div>
                 <form onSubmit={submitBottomForm} onChange={updateFormInfo} className="bottom-nav-form">
                     <label for="bottom-nav-form-name">Name</label>
+                        <br></br>
                     <input id="bottom-nav-form-name" name="name" />
                         <br></br>
                     <label for="bottom-nav-form-email">Email</label>
+                        <br></br>
                     <input id="bottom-nav-form-email" name="email" />
                         <br></br>
                     <label for="bottom-nav-form-phone">Phone Number</label>
+                        <br></br>
                     <input id="bottom-nav-form-phone" name="phone" />
-
+                        <br></br>
                     <button type="submit">Submit</button>
                 </form>      
             </>
