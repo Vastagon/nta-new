@@ -4,7 +4,6 @@
   --navbar-color: #F7F9FB;
   --quick-links-text-color: #135344;
   --navbar-text: #199E1B;
-  /* --navbar-text: #199E2F; */
   --scheme-black: #040F0F;
   --scheme-white: #FFFFFF;
   --scheme-gray: #BEBFC4;
@@ -15,11 +14,10 @@
   --text-color-black: #555555;
 
   --image-slide-time: .8s;
-  --bottom-slide-percentage: 20%;
+  --bottom-slide-percentage: 25%;
 
   color: var(--scheme-gray);
   background-color: #FEFFFF;
-  /* F7F9FB */
   font-family: 'Roboto', sans-serif;
   border-style: border-box;
 }
@@ -29,18 +27,6 @@
   left: 0;
   width: 100%;
 }
-/* Colors */
-/*
-  #008000
-
-  Pallete:
-  #040F0F
-  #FFFFFF
-  #BEBFC4
-  #183C28
-  #EEC643
-  
-*/
 
 
 /* Navbar */

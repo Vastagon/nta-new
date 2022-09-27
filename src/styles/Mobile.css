@@ -27,6 +27,7 @@
     .hidden{
       display: none;
     }
+
   
   
     /* Programs */
@@ -227,7 +228,7 @@
 /* Slide on Animations */
 @keyframes image-slide-left-second {
   0%{
-    transform: translateX(-100%);
+    transform: translateX(-2%);
     opacity: .1;
   }
   100%{
@@ -237,7 +238,7 @@
 }
 @keyframes image-slide-right-second {
   0%{
-    transform: translateX(100%);
+    transform: translateX(2%);
     opacity: .1;
   }
   100%{
