@@ -15,6 +15,7 @@
   --text-color-black: #555555;
 
   --image-slide-time: .8s;
+  --bottom-slide-percentage: 20%;
 
   color: var(--scheme-gray);
   background-color: #FEFFFF;
@@ -114,7 +115,7 @@
     bottom: -35%;
   }
   100%{
-    bottom: 40%;
+    bottom: var(--bottom-slide-percentage);
   }
 }
 .bottom-nav-form{
@@ -125,7 +126,11 @@
   width: 80%;
   margin-left: 10%;
   padding: 2%;
-  bottom: 40%;
+  bottom: var(--bottom-slide-percentage);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   animation: bottom-form-slide 1s;
 }
@@ -135,10 +140,11 @@
 }
 .bottom-nav-form > input{
   width: 80%;
-  margin-left: 10%;
 }
 .bottom-nav-form > button{
   padding: 2%;
+  margin-top: 5%;
+  width: 50%;
 }
 .show-hover:hover{
   cursor: pointer;

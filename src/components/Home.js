@@ -7,10 +7,26 @@ import Programs from "./Programs"
 import Schedule from "./Schedule"
 import Reviews from "./Reviews"
 import ContactUs from "./ContactUs"
-import { useState } from "react";
+import MobileNav from "./MobileNav";
+import { useEffect, useState } from "react";
 
 export default function Home(){
     let [showMobileNav, setShowMobileNav] = useState(false)
+
+    useEffect(() =>{
+        document.querySelectorAll(".page").forEach((checkedElements) =>{
+            console.log(checkedElements)
+            if(!checkedElements.classList.contains("home")){
+                checkedElements.addEventListener("click", ()=>{
+                    if(showMobileNav){
+                        setShowMobileNav(false)
+                        console.log("HERE")
+                    }
+                })                  
+            }
+        })
+    }, [])
+    
 
     function clickScrollTo(position){
         let element = document.getElementById(position)
@@ -44,30 +60,40 @@ export default function Home(){
         }
     }
 
+    console.log(showMobileNav)
+
     return(
-        <div className="home page">
-            <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} />
-            
-            <HomeSlider />
+        <>
+            <div className="home page">
+                <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} />
 
-            <div className="home-container">
-                <h2 className="home-title">NTA Taekwondo</h2>
-                <p id="overviewScroll" className="home-content">The NTA Taekwondo Center has classes oriented for both children and adults. The energetic atmosphere of our programs 
-                and our personal approach to teaching are designed to give students the necessary tools to become better people through martial arts.  Whether you 
-                are interested in Taekwondo as an exercise program or are a national-level athlete who wants to train for competition, 
-                NTA Taekwondo Center has classes to help meet your goals!</p>                
-            </div>
+                <div id="everything-except-navbar">
+                <HomeSlider />
+
+                <div className="home-container">
+                    <h2 className="home-title">NTA Taekwondo</h2>
+                    <p id="overviewScroll" className="home-content">The NTA Taekwondo Center has classes oriented for both children and adults. The energetic atmosphere of our programs 
+                    and our personal approach to teaching are designed to give students the necessary tools to become better people through martial arts.  Whether you 
+                    are interested in Taekwondo as an exercise program or are a national-level athlete who wants to train for competition, 
+                    NTA Taekwondo Center has classes to help meet your goals!</p>                
+                </div>
 
 
 
-            <AfterSchool />
-            <Programs />
-            <Schedule />
-            <Reviews />
-            <ContactUs />
+                <AfterSchool />
+                <Programs />
+                <Schedule />
+                <Reviews />
+                <ContactUs />
 
-            <HomeBottomNav />
-            <Footer clickScrollTo={clickScrollTo}/>
-        </div>
+                <HomeBottomNav />
+                <Footer clickScrollTo={clickScrollTo}/>
+                </div>
+            </div> 
+
+        {showMobileNav ? <MobileNav clickScrollTo={clickScrollTo} /> : null}
+
+        </>
+
     )
 }

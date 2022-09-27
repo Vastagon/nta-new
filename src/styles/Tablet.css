@@ -1,9 +1,4 @@
 @media screen and (max-width: 950px) {
-    .page{
-        margin-top: 10% !important;
-    }
-
-
     /* Reviews */
     .reviews-container{
         grid-template-columns: 100%; 
