@@ -68,7 +68,7 @@ export default function HomeBottomNav(){
             :
             // While Closed
             <div onClick={toggleBottomNav} className="show-hover bottom-nav">
-                <div className="bottom-text-container">
+                <div className="no-bottom-border bottom-text-container">
                     <h4 className="bottom-nav-text">Interested? Sign up for classes</h4>
                     {/* <img className="bottom-nav-arrow" /> */}
                     <div className="bottom-nav-arrow"></div>

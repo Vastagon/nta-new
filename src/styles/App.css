@@ -54,6 +54,8 @@
   border-color: var(--nta-green2); */
 
   animation: bottom-nav-slide-down 1s;
+  /* animation: remove-bottom-border 1s; */
+  animation-delay: 1s;
 }
 .bottom-nav-arrow{
   position: relative;
@@ -67,7 +69,7 @@
   border-style: solid;
   z-index: 101;
   margin-left: 2%;
-  margin-top: 2%;
+  /* margin-top: 2%; */
 
   transform: rotate(45deg);
 }
@@ -153,6 +155,22 @@
   justify-content: center;
 
   animation: bottom-form-slide 1s;
+}
+.no-bottom-border{
+  animation: remove-bottom-border 1s;
+  /* animation: remove-bottom-border 1s;
+  animation-delay: 1s; */
+  /* border-bottom: 0px; */
+}
+@keyframes remove-bottom-border {
+  0%{
+    border-bottom: 10px;
+    color: #040F0F;
+  }
+  100%{
+    border-bottom: 0px;
+    color: #EEC643;
+  }
 }
 .bottom-nav-form > label{
   width: 100%;
