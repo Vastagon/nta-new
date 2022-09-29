@@ -32,12 +32,12 @@
 /* Navbar */
 .bottom-nav{
   height: 10vh;
-  position: fixed !important;
+  position: fixed;
   bottom: -20px;
   background-color: black;
   width: 100%;
   display: flex;
-  position: relative;
+  /* position: relative; */
   align-items: center;
   justify-content: center;
   color: white;
@@ -65,14 +65,11 @@
   height: 80vh;
   animation: bottom-nav-slide 1s;
 }
+.bottom-text-container{
+
+}
 .bottom-nav-text{
-  position: absolute;
-  top: 0%;
-  left: 0;
-  line-height: 300%;
-  text-align: center;
-  width: 100vw;
-  height: auto;
+  line-height: 5vh;
 }
 .bottom-nav-arrow{
   width: auto;
@@ -139,9 +136,6 @@
   height: 5vh;
   padding-left: 0%;
 }
-.bottom-nav > h4{
-  margin: auto;
-}
 .mynav{
   position: fixed;
   top: 0;
@@ -169,13 +163,15 @@
 .nav-tab{
   margin-left: 1.5rem;
   opacity: 1;
-  color: var(--quick-links-text-color);
+  /* color: var(--quick-links-text-color); */
+  color: rgb(11, 109, 11);
   font-size: 1.2rem;
 }
 .nav-tab:hover{
   cursor: pointer;
-  opacity: .6;
+  opacity: .9;
   transition-duration: 500ms;
+  color: green;
 }
 .icon{
   font-size: 1.2rem;
@@ -455,7 +451,6 @@ footer{
 }
 .contactus-footer{
   text-align: left;
-
 }
 .follow-us{
   width: 10rem;
@@ -472,13 +467,11 @@ footer{
   opacity: 1;
 }
 .quick-links > div:hover{
-  color: #115633;
-  
-}
-.quick-links > div:hover{
   cursor: pointer;
-  opacity: .8;
+  opacity: 1;
   transition-duration: .5s;
+  /* color: #115633; */
+  /* color: green; */
 }
 .footer-icon{
   width: auto;

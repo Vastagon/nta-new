@@ -63,7 +63,7 @@ export default function HomeBottomNav(){
             :
             // While Closed
             <div onClick={toggleBottomNav} className="show-hover bottom-nav">
-                <div style={{display: "flex"}}>
+                <div className="bottom-text-container">
                     <h4 className="bottom-nav-text">Interested? Sign up for classes</h4>
                     {/* <img className="bottom-nav-arrow" /> */}
                 </div>
