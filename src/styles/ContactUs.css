@@ -91,6 +91,7 @@
   height: 10vh;
   padding-top: 1%;
   padding-bottom: 4%;
+  z-index: 101;
 }
 .form-label{
   margin-top: .5rem;

@@ -100,7 +100,7 @@
     footer{
         flex-direction: column;
         height: 100%;
-        padding-bottom: 5vh;
+        padding-bottom: 12vh;
     }
     .footer-icon, .quick-links, .contact-us-footer-grid{
         text-align: center;
@@ -117,7 +117,7 @@
         margin-top: 2%;
     }
     .footer-icon{
-        padding-top: 15vh;
+        padding-top: 5vh;
         margin-left: 2%;
     }
     .quick-links > div, .contactus-footer{

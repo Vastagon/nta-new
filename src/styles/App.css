@@ -14,7 +14,7 @@
   --text-color-black: #555555;
 
   --image-slide-time: .8s;
-  --bottom-slide-percentage: 25%;
+  --bottom-slide-percentage: 15vh;
 
   color: var(--scheme-gray);
   background-color: #FEFFFF;
@@ -33,7 +33,7 @@
 .bottom-nav{
   height: 10vh;
   position: fixed;
-  bottom: -20px;
+  bottom: 0px;
   background-color: black;
   width: 100%;
   display: flex;
@@ -66,10 +66,19 @@
   animation: bottom-nav-slide 1s;
 }
 .bottom-text-container{
-
+  top: 0;
+  width: 100%;
+  position: absolute;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-text-container:hover{
+  cursor: pointer;
 }
 .bottom-nav-text{
-  line-height: 5vh;
+  margin: 0;
 }
 .bottom-nav-arrow{
   width: auto;
@@ -164,7 +173,9 @@
   margin-left: 1.5rem;
   opacity: 1;
   /* color: var(--quick-links-text-color); */
-  color: rgb(11, 109, 11);
+  /* color: rgb(9, 97, 9); */
+  color: rgb(9, 87, 9);
+
   font-size: 1.2rem;
 }
 .nav-tab:hover{
