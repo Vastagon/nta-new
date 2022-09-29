@@ -11,20 +11,41 @@ import MobileNav from "./MobileNav";
 import { useEffect, useState } from "react";
 
 export default function Home(){
-    let [showMobileNav, setShowMobileNav] = useState(false)
+    const [showMobileNav, setShowMobileNav] = useState(false)
+    const [isMobileDevice, setIsMobileDevide] = useState()
 
     useEffect(() =>{
+        ///Adds click event listeners so mobile nav can exit when click outside of
         document.querySelectorAll(".page").forEach((checkedElements) =>{
-            console.log(checkedElements)
             if(!checkedElements.classList.contains("home")){
                 checkedElements.addEventListener("click", ()=>{
                     if(showMobileNav){
                         setShowMobileNav(false)
-                        console.log("HERE")
                     }
                 })                  
             }
         })
+
+         /* Storing user's device details in a variable*/
+         let details = navigator.userAgent;
+  
+         /* Creating a regular expression 
+         containing some mobile devices keywords 
+         to search it in details string*/
+         let regexp = /android|iPhone|iphone|kindle|Ipad|ipad/i;
+   
+         /* Using test() method to search regexp in details
+         it returns boolean value*/
+         setIsMobileDevide(regexp.test(details))
+         console.log(details)
+        //  let isMobileDevice = regexp.test(details);
+   
+        if (isMobileDevice) {
+            console.log("This is a mobile device")
+        } else {
+            console.log("Not a mobile device")
+        }
+
     }, [])
     
 
@@ -60,7 +81,7 @@ export default function Home(){
         }
     }
 
-    console.log(showMobileNav)
+    if(isMobileDevice === null) return null
 
     return(
         <>

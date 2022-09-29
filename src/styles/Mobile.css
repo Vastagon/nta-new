@@ -262,7 +262,8 @@
       position: relative;
       width: 100%;
       margin-top: 0rem;
-    
+      padding-bottom: 30%;
+
       z-index: 0;
     }
     .footer-icon, .contact-us-footer-grid{
