@@ -53,9 +53,7 @@
   border-style: solid;
   border-color: var(--nta-green2); */
 
-  animation: bottom-nav-slide-down 1s;
   /* animation: remove-bottom-border 1s; */
-  animation-delay: 1s;
 }
 .bottom-nav-arrow{
   position: relative;
@@ -72,6 +70,20 @@
   /* margin-top: 2%; */
 
   transform: rotate(45deg);
+}
+.slide-down-animation{
+  animation: bottom-nav-slide-down 1s;
+}
+.turn-bottom-arrow-down{
+  animation: turn-bottom-arrow-down 1s;
+}
+@keyframes turn-bottom-arrow-down {
+  0%{
+    transform: rotate(225deg);
+  }
+  100%{
+    transform: rotate(45deg);
+  }
 }
 .open-bottom-nav{
   height: 80vh;
@@ -158,18 +170,15 @@
 }
 .no-bottom-border{
   animation: remove-bottom-border 1s;
-  /* animation: remove-bottom-border 1s;
-  animation-delay: 1s; */
-  /* border-bottom: 0px; */
+  animation-delay: .95s;
+  animation-fill-mode: forwards;  
 }
 @keyframes remove-bottom-border {
   0%{
     border-bottom: 10px;
-    color: #040F0F;
   }
   100%{
     border-bottom: 0px;
-    color: #EEC643;
   }
 }
 .bottom-nav-form > label{

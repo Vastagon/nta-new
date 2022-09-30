@@ -1,11 +1,12 @@
 import { useState } from "react"
 import * as emailjs from 'emailjs-com'
-
+///variable that gets set to true after the first time bottom nav is clicked. That changes what classes are chosen
 
 export default function HomeBottomNav(){
     const [showBottomNav, setShowBottomNav] = useState(false)
     const [bottomFormSendingEmail, setBottomFormSendingEmail] = useState(false)
     const [bottomFormInfo, setBottomFormInfo] = useState()
+    const [firstClickBoolean, setFirstClickBoolean] = useState(false)
 
     function updateFormInfo(e){
         setBottomFormInfo(prev => ({
@@ -36,6 +37,9 @@ export default function HomeBottomNav(){
 
     function toggleBottomNav(){
         setShowBottomNav(prev => !prev)
+        if(!firstClickBoolean){
+            setFirstClickBoolean(true)
+        }
     }
 
     
@@ -67,11 +71,11 @@ export default function HomeBottomNav(){
             </>
             :
             // While Closed
-            <div onClick={toggleBottomNav} className="show-hover bottom-nav">
+            <div onClick={toggleBottomNav} className={firstClickBoolean ? "slide-down-animation show-hover bottom-nav" : "show-hover bottom-nav"}>
                 <div className="no-bottom-border bottom-text-container">
                     <h4 className="bottom-nav-text">Interested? Sign up for classes</h4>
                     {/* <img className="bottom-nav-arrow" /> */}
-                    <div className="bottom-nav-arrow"></div>
+                    <div className={firstClickBoolean ? "turn-bottom-arrow-down bottom-nav-arrow" : "bottom-nav-arrow"}></div>
                 </div>
 
             </div>
