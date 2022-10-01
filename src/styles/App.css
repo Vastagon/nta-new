@@ -28,7 +28,10 @@
   width: 100%;
 }
 
-
+#everything-except-navbar{
+  position: absolute;
+  top: 0;
+}
 /* Navbar */
 .bottom-nav{
   height: 10vh;
@@ -175,11 +178,14 @@
 }
 @keyframes remove-bottom-border {
   0%{
-    border-bottom: 10px;
+    border-bottom: 2px;
   }
   100%{
     border-bottom: 0px;
   }
+}
+.no-bottom-nav-border{
+  border-bottom: 0;
 }
 .bottom-nav-form > label{
   width: 100%;

@@ -2,8 +2,7 @@ import { useState } from "react"
 import * as emailjs from 'emailjs-com'
 ///variable that gets set to true after the first time bottom nav is clicked. That changes what classes are chosen
 
-export default function HomeBottomNav(){
-    const [showBottomNav, setShowBottomNav] = useState(false)
+export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
     const [bottomFormSendingEmail, setBottomFormSendingEmail] = useState(false)
     const [bottomFormInfo, setBottomFormInfo] = useState()
     const [firstClickBoolean, setFirstClickBoolean] = useState(false)
@@ -41,7 +40,7 @@ export default function HomeBottomNav(){
             setFirstClickBoolean(true)
         }
     }
-
+    console.log(firstClickBoolean)
     
     return(
         <>
@@ -55,7 +54,6 @@ export default function HomeBottomNav(){
                         {/* <img className="bottom-nav-arrow" /> */}
                     </div>     
                     <div className="turn-bottom-nav-arrow bottom-nav-arrow"></div>
-               
                 </div>
             </div>
                 <form onSubmit={submitBottomForm} onChange={updateFormInfo} className="bottom-nav-form">
@@ -69,10 +67,10 @@ export default function HomeBottomNav(){
                     <button type="submit">Submit</button>
                 </form>      
             </>
-            :
-            // While Closed
+            ://If false use no-bottom-nav-border
+            // While Closed  no-bottom-nav-border
             <div onClick={toggleBottomNav} className={firstClickBoolean ? "slide-down-animation show-hover bottom-nav" : "show-hover bottom-nav"}>
-                <div className="no-bottom-border bottom-text-container">
+                <div className={firstClickBoolean ? "no-bottom-border bottom-text-container" : "no-bottom-nav-border bottom-text-container"}>
                     <h4 className="bottom-nav-text">Interested? Sign up for classes</h4>
                     {/* <img className="bottom-nav-arrow" /> */}
                     <div className={firstClickBoolean ? "turn-bottom-arrow-down bottom-nav-arrow" : "bottom-nav-arrow"}></div>

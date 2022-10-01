@@ -27,7 +27,7 @@ export default function Schedule(){
 
     return(
 
-        <div className="schedule page">
+        <div className="schedule nav-close">
             <h1 className="schedule-title">Schedule</h1>
 
             {screenWidth < screenHeight || (screenOrientation === "landscape-primary" && screenWidth < 800)?
@@ -35,10 +35,6 @@ export default function Schedule(){
             :
                 <DesktopSchedule />
             }
-
-            {/* <Footer /> */}
-
         </div>
-
     )
 }

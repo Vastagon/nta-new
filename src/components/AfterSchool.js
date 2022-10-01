@@ -2,14 +2,20 @@
 
 export default function AfterSchool(){
     return(
-        <div className="after-school page">
+        <div className="after-school nav-close">
             <div className="overview">
                 <h2>Overview</h2>
-                <p>Taekwondo is a traditional Korean martial art, which means “the way of kicking and punching”. In taekwondo, hands and feet can be 
+                <p>The NTA Taekwondo Center has classes oriented for both children and adults. The energetic atmosphere of our programs and our 
+                    personal approach to teaching are designed to give students the necessary tools to become better people through martial arts. 
+                    Whether you are interested in Taekwondo as an exercise program or are a national-level athlete who wants to train for competition, 
+                    NTA Taekwondo Center has classes to help meet your goals!</p>
+
+
+                {/* Taekwondo is a traditional Korean martial art, which means “the way of kicking and punching”. In taekwondo, hands and feet can be 
                     used to overcome an opponent, but the trademark of the sport is its combination of kick movements.  Taekwondo is one of the two 
                     Asian martial arts included on the Olympic programme. Taekwondo made its debut as a demonstration Olympic sport at the 1988 Seoul 
                     Games, and became an official medal sport at the 2000 Sydney Games. NTA’s Olympic Program delivers a path to the Olympics.  
-                    NTA has produced numerous regional, state and national champions.</p>
+                    NTA has produced numerous regional, state and national champions. */}
             </div>
 
             <div className="afterschool-content">

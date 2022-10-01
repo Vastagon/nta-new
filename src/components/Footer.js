@@ -1,7 +1,7 @@
 export default function Footer({clickScrollTo}){
 
     return(
-        <footer className="page" id="footer">
+        <footer className="nav-close" id="footer">
             <img alt="not found" className="footer-icon" src={require("../images/NTALogo2.webp")} />
             <div className="quick-links footer-segment">
                 <h2>Quick Links</h2>

@@ -143,6 +143,8 @@
     }
     .programs-card{
         width: 100%;
+        font-size: 1rem;
+        height: auto;
 
         border-top: 2px;
         border-left: 0px;

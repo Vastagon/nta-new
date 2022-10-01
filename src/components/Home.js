@@ -12,39 +12,44 @@ import { useEffect, useState } from "react";
 
 export default function Home(){
     const [showMobileNav, setShowMobileNav] = useState(false)
-    const [isMobileDevice, setIsMobileDevide] = useState()
+    const [showBottomNav, setShowBottomNav] = useState(false)
+
+    // const [isMobileDevice, setIsMobileDevide] = useState()
 
     useEffect(() =>{
         ///Adds click event listeners so mobile nav can exit when click outside of
-        document.querySelectorAll(".page").forEach((checkedElements) =>{
+        document.querySelectorAll(".nav-close").forEach((checkedElements) =>{
+            console.log("CLICKED")
             if(!checkedElements.classList.contains("home")){
                 checkedElements.addEventListener("click", ()=>{
                     if(showMobileNav){
                         setShowMobileNav(false)
                     }
+                    if(showBottomNav){
+                        setShowBottomNav(false)
+                    }
                 })                  
             }
         })
 
-         /* Storing user's device details in a variable*/
-         let details = navigator.userAgent;
+        //  /* Storing user's device details in a variable*/
+        //  let details = navigator.userAgent;
   
-         /* Creating a regular expression 
-         containing some mobile devices keywords 
-         to search it in details string*/
-         let regexp = /android|iPhone|iphone|kindle|Ipad|ipad/i;
+        //  /* Creating a regular expression 
+        //  containing some mobile devices keywords 
+        //  to search it in details string*/
+        //  let regexp = /android|iPhone|iphone|kindle|Ipad|ipad/i;
    
-         /* Using test() method to search regexp in details
-         it returns boolean value*/
-         setIsMobileDevide(regexp.test(details))
-         console.log(details)
-        //  let isMobileDevice = regexp.test(details);
+        //  /* Using test() method to search regexp in details
+        //  it returns boolean value*/
+        //  setIsMobileDevide(regexp.test(details))
+        //  console.log(details)
    
-        if (isMobileDevice) {
-            console.log("This is a mobile device")
-        } else {
-            console.log("Not a mobile device")
-        }
+        // if (isMobileDevice) {
+        //     console.log("This is a mobile device")
+        // } else {
+        //     console.log("Not a mobile device")
+        // }
 
     }, [])
     
@@ -65,13 +70,9 @@ export default function Home(){
             }
         }
         
-        
-
         if(position === "overviewScroll") temp = temp + 100
         if(position === "scheduleScroll") temp = temp - 180
         if(position === "contactUsScroll") temp = temp - 150
-
-
 
         window.scrollTo(0, temp)
 
@@ -81,25 +82,29 @@ export default function Home(){
         }
     }
 
-    if(isMobileDevice === null) return null
+    // if(isMobileDevice === null) return null
 
     return(
         <>
-            <div className="home page">
+            <div className="home nav-close">
                 <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} />
 
                 <div id="everything-except-navbar">
                 <HomeSlider />
-
-                <div className="home-container">
+{/* 
+                <div className="home-container nav-close">
                     <h2 className="home-title">NTA Taekwondo</h2>
-                    <p id="overviewScroll" className="home-content">The NTA Taekwondo Center has classes oriented for both children and adults. The energetic atmosphere of our programs 
+                    <p id="overviewScroll" className="home-content">The NTA Taekwondo Center has classes oriented for both children and adults. The 
+                    energetic atmosphere of our programs and our personal approach to teaching are designed to give students the necessary tools to 
+                    become better people through martial arts. Whether you are interested in Taekwondo as an exercise program or are a national-level 
+                    athlete who wants to train for competition, NTA Taekwondo Center has classes to help meet your goals!</p>                
+                </div> */}
+
+                <div id="overviewScroll"></div>
+                {/* The NTA Taekwondo Center has classes oriented for both children and adults. The energetic atmosphere of our programs 
                     and our personal approach to teaching are designed to give students the necessary tools to become better people through martial arts.  Whether you 
                     are interested in Taekwondo as an exercise program or are a national-level athlete who wants to train for competition, 
-                    NTA Taekwondo Center has classes to help meet your goals!</p>                
-                </div>
-
-
+                    NTA Taekwondo Center has classes to help meet your goals! */}
 
                 <AfterSchool />
                 <Programs />
@@ -107,7 +112,7 @@ export default function Home(){
                 <Reviews />
                 <ContactUs />
 
-                <HomeBottomNav />
+                <HomeBottomNav showBottomNav={showBottomNav} setShowBottomNav={setShowBottomNav}/>
                 <Footer clickScrollTo={clickScrollTo}/>
                 </div>
             </div> 

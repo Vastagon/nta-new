@@ -8,7 +8,7 @@ export default function Programs(){
         <>
             <h1 className="programs-header">Programs</h1>
 
-            <div  className="programs page">
+            <div  className="programs nav-close">
                 <div className="programs-card-container">
                     <div className="programs-card">
                         <img rel="preload" alt="Card image cap" src={traditionalTaekwondo} />
