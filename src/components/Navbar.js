@@ -10,10 +10,34 @@ import "../styles/Mobile.css"
 
 import MobileNav from "./MobileNav"
 
-import NTALogo from "../images/NTALogo2.webp"
+import NTALogo from "../images/NTALogo.webp"
+import { useEffect, useState } from 'react';
 
 
 export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav}){
+    const [isMobileDevice, setIsMobileDevice] = useState()
+
+    useEffect(() =>{
+        /* Storing user's device details in a variable*/
+        let details = navigator.userAgent;
+
+        /* Creating a regular expression 
+        containing some mobile devices keywords 
+        to search it in details string*/
+        let regexp = /android|iPhone|iphone|kindle|Ipad|ipad/i;
+
+        /* Using test() method to search regexp in details
+        it returns boolean value*/
+        setIsMobileDevice(regexp.test(details))
+        console.log(details)
+
+        if (isMobileDevice) {
+            console.log("This is a mobile device")
+        } else {
+            console.log("Not a mobile device")
+        }
+    }, [])        
+
 
     // useEffect(() =>{
     //     let appHeight = document.getElementById("app")?.offsetHeight
@@ -35,11 +59,13 @@ export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav})
 
 ///if home id is clicked then setShowMobileNav to false
 
+//if (!isMobileDevice) show blank else show blank
+
     return(
         <div className="mynav">
-            <img alt="Image not Found. Send help" onClick={() => clickScrollTo("root")} src={NTALogo} className="icon nav-tab" />
+            <img alt="NTA Taekwondo Logo" onClick={() => clickScrollTo("root")} src={NTALogo} className="icon nav-tab" />
 
-            {window.innerWidth <= 950 || window.innerHeight < 425? 
+            {(window.innerWidth <= 950 || window.innerHeight < 425) ? 
             // Mobile Navbar
             <div id="hamburger-nav" onClick={openMobileNav} className="hamburger-nav">
                 <div className="hamburger-line"></div>
@@ -48,11 +74,11 @@ export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav})
             </div>
             :             
             <div className="nav-tab-container">
-                <div onClick={() => {clickScrollTo("programsScroll")}} className="programs-tab nav-tab">Programs</div>
-                <div onClick={() => {clickScrollTo("overviewScroll")}} className="overview-tab nav-tab">Overview</div>                
-                <div onClick={() => {clickScrollTo("scheduleScroll")}} className="schedule-tab nav-tab">Schedule</div>
-                <div onClick={() => {clickScrollTo("reviewsScroll")}} className="reviews-tab nav-tab">Reviews</div>
-                <div onClick={() => {clickScrollTo("contactUsScroll")}} className="contactus-tab nav-tab">Contact Us</div>
+                <div onClick={() => {clickScrollTo("programsScroll")}} className="desktop-tab programs-tab nav-tab">Programs</div>
+                <div onClick={() => {clickScrollTo("overviewScroll")}} className="desktop-tab overview-tab nav-tab">Overview</div>                
+                <div onClick={() => {clickScrollTo("scheduleScroll")}} className="desktop-tab schedule-tab nav-tab">Schedule</div>
+                <div onClick={() => {clickScrollTo("reviewsScroll")}} className="desktop-tab reviews-tab nav-tab">Reviews</div>
+                <div onClick={() => {clickScrollTo("contactUsScroll")}} className="desktop-tab contactus-tab nav-tab">Contact Us</div>
             </div>
             }
 

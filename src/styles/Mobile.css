@@ -20,6 +20,15 @@
       justify-content: center;
       text-align: center;
     }
+    .desktop-tab{
+      margin-left: 1.5rem;
+      opacity: 1;
+      /* color: var(--quick-links-text-color); */
+      /* color: rgb(9, 97, 9); */
+      color: rgb(9, 87, 9);
+    
+      font-size: 1.2rem;
+    }
     .icon{
       margin-top: 0;
       margin-left: 1rem;

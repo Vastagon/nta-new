@@ -14,7 +14,7 @@
   --text-color-black: #555555;
 
   --image-slide-time: .8s;
-  --bottom-slide-percentage: 15vh;
+  --bottom-slide-percentage: 20vh;
 
   color: var(--scheme-gray);
   background-color: #FEFFFF;
@@ -27,7 +27,15 @@
   left: 0;
   width: 100%;
 }
+.desktop-tab{
+  margin-left: 1.5rem;
+  opacity: 1;
+  /* color: var(--quick-links-text-color); */
+  /* color: rgb(9, 97, 9); */
+  color: rgb(9, 87, 9);
 
+  font-size: 1.2rem;
+}
 #everything-except-navbar{
   position: absolute;
   top: 0;
@@ -149,7 +157,7 @@
 }
 @keyframes bottom-form-slide {
   0%{
-    bottom: -35%;
+    bottom: -50%;
   }
   100%{
     bottom: var(--bottom-slide-percentage);

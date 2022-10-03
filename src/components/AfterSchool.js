@@ -38,12 +38,12 @@ export default function AfterSchool(){
                         compared to when they started.</p>
                     </div>
                     
-                    <img alt="Image not Found" className="right-image" src={require("../images/smallFamilyFriendly.jpg")} />
+                    <img alt="Taekwondo Family Friendly" className="right-image" src={require("../images/smallFamilyFriendly.jpg")} />
                 </div>
                 
                 {/* Image on the left */}
                 <div className="image-segment">
-                    <img alt="Image not Found" className="right-image" src={require("../images/olympictaekwondo.webp")} />
+                    <img alt="Olympic Taekwondo Athlete" className="right-image" src={require("../images/olympictaekwondo.webp")} />
 
                     <div className="image-segment-text">
                         <h3>Stress Relief</h3>
@@ -81,7 +81,7 @@ export default function AfterSchool(){
                         <div id="programsScroll"></div>
                     </div>
                     {/* smallFamilyFriendly.jpg */}
-                    <img alt="Image not Found" className="right-image" src={require("../images/familyFriendly.jpg")} />
+                    <img alt="Family Friendly TKD" className="right-image" src={require("../images/familyFriendly.jpg")} />
                 </div>
 
             </div>

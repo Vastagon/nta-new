@@ -2,7 +2,7 @@ export default function Footer({clickScrollTo}){
 
     return(
         <footer className="nav-close" id="footer">
-            <img alt="not found" className="footer-icon" src={require("../images/NTALogo2.webp")} />
+            <img alt="NTA Taekwondo Logo" className="footer-icon" src={require("../images/NTALogo.webp")} />
             <div className="quick-links footer-segment">
                 <h2>Quick Links</h2>
 
@@ -20,7 +20,7 @@ export default function Footer({clickScrollTo}){
                     <div>3000 Grapevine Mills Pkwy, Grapevine, Texas</div>
                     <div>ntataekwondo@gmail.com</div>
                     <div>(972) 471-2333</div>
-                    <img alt="not found" onClick={() => {window.open("https://www.facebook.com/groups/403731716464076", "_blank")}} className='facebook-icon' src="https://louisville.edu/english/images/facebookicon.png/image" />
+                    <img alt="Facebook Taekwondo Logo" onClick={() => {window.open("https://www.facebook.com/groups/403731716464076", "_blank")}} className='facebook-icon' src="https://louisville.edu/english/images/facebookicon.png/image" />
                 </div>
             </div>
         </footer>

@@ -1,6 +1,6 @@
-import traditionalTaekwondo from "../images/traditional-program.webp"
+import traditionalTaekwondo from "../images/traditionalTaekwondoProgram.webp"
 import olympicTaekwondo from "../images/olympictaekwondo.webp"
-import kidsTraining from "../images/kidsTraining.webp"
+import kidsTraining from "../images/kidsTrainingTaekwondo.webp"
 
 export default function Programs(){
 

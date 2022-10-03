@@ -14,7 +14,6 @@ export default function Home(){
     const [showMobileNav, setShowMobileNav] = useState(false)
     const [showBottomNav, setShowBottomNav] = useState(false)
 
-    // const [isMobileDevice, setIsMobileDevide] = useState()
 
     useEffect(() =>{
         ///Adds click event listeners so mobile nav can exit when click outside of
@@ -31,25 +30,6 @@ export default function Home(){
                 })                  
             }
         })
-
-        //  /* Storing user's device details in a variable*/
-        //  let details = navigator.userAgent;
-  
-        //  /* Creating a regular expression 
-        //  containing some mobile devices keywords 
-        //  to search it in details string*/
-        //  let regexp = /android|iPhone|iphone|kindle|Ipad|ipad/i;
-   
-        //  /* Using test() method to search regexp in details
-        //  it returns boolean value*/
-        //  setIsMobileDevide(regexp.test(details))
-        //  console.log(details)
-   
-        // if (isMobileDevice) {
-        //     console.log("This is a mobile device")
-        // } else {
-        //     console.log("Not a mobile device")
-        // }
 
     }, [])
     
