@@ -14,7 +14,7 @@
   --text-color-black: #555555;
 
   --image-slide-time: .8s;
-  --bottom-slide-percentage: 20vh;
+  --bottom-slide-percentage: 15vh;
 
   color: var(--scheme-gray);
   background-color: #FEFFFF;
@@ -157,17 +157,25 @@
 }
 @keyframes bottom-form-slide {
   0%{
-    bottom: -50%;
+    bottom: -56%;
   }
   100%{
     bottom: var(--bottom-slide-percentage);
+  }
+}
+@keyframes bottom-form-slide-down {
+  0%{
+    bottom: var(--bottom-slide-percentage);
+  }
+  100%{
+    bottom: -56%;
   }
 }
 .bottom-nav-form{
   position: fixed;
   z-index: 100;
   color: white;
-  background-color: green;
+  /* background-color: var(--nta-green); */
   width: 80%;
   margin-left: 10%;
   padding: 2%;
@@ -179,9 +187,18 @@
 
   animation: bottom-form-slide 1s;
 }
+.closed-form{
+  animation: bottom-form-slide-down 1s;
+  animation-fill-mode: forwards;
+}
+.first-closed-form{
+  display: none;
+  animation: none;
+  animation-fill-mode: none;
+}
 .no-bottom-border{
   animation: remove-bottom-border 1s;
-  animation-delay: .95s;
+  animation-delay: .99s;
   animation-fill-mode: forwards;  
 }
 @keyframes remove-bottom-border {
@@ -197,15 +214,39 @@
 }
 .bottom-nav-form > label{
   width: 100%;
-  text-align: center;
+  padding-left: 20%;
+  margin-top: 1%;
+}
+.asterisk{
+  color: orange;
+}
+.bottom-form-submit-button{
+  padding: 1%;
+  margin-top: 1%;
+  width: 10%;
+  margin-left: 50%;
 }
 .bottom-nav-form > input{
-  width: 80%;
+  width: 60%;
+  color: white;
+  border-style: none;
+  padding: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  /* text-align: center; */
+  border-bottom: 3px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-style: solid;
+  border-color: white;
+  background-color: black;
 }
-.bottom-nav-form > button{
-  padding: 2%;
-  margin-top: 5%;
-  width: 50%;
+.bottom-nav-form > input:focus{
+  /* border-color: rgba(229, 23, 23, 0.8);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 4px rgba(229, 23, 23, 0.6); */
+  outline: 0 none;
+  border-color: var(--nta-green);
 }
 .show-hover:hover{
   cursor: pointer;

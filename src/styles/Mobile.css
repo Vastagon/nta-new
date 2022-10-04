@@ -378,7 +378,21 @@
 }
 
 @media screen and (orientation: landscape) and (max-width: 750px) {
+  :root{
+    --bottom-slide-percentage: -10vh;
+  }
   .card-group{
     flex-flow: column nowrap;
+  }
+  .bottom-nav-form{
+    bottom: 0;
+  }
+  .bottom-nav-form > label{
+    width: 100%;
+    padding-left: 20%;
+    margin-top: 0%;
+  }
+  .bottom-form-submit-button{
+    margin-top: 2%;
   }
 }

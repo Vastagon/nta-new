@@ -18,7 +18,7 @@ export default function Home(){
     useEffect(() =>{
         ///Adds click event listeners so mobile nav can exit when click outside of
         document.querySelectorAll(".nav-close").forEach((checkedElements) =>{
-            console.log("CLICKED")
+            // console.log("CLICKED")
             if(!checkedElements.classList.contains("home")){
                 checkedElements.addEventListener("click", ()=>{
                     if(showMobileNav){

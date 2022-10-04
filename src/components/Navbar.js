@@ -29,13 +29,13 @@ export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav})
         /* Using test() method to search regexp in details
         it returns boolean value*/
         setIsMobileDevice(regexp.test(details))
-        console.log(details)
+        // console.log(details)
 
-        if (isMobileDevice) {
-            console.log("This is a mobile device")
-        } else {
-            console.log("Not a mobile device")
-        }
+        // if (isMobileDevice) {
+        //     console.log("This is a mobile device")
+        // } else {
+        //     console.log("Not a mobile device")
+        // }
     }, [])        
 
 
