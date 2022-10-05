@@ -50,7 +50,7 @@ export default function Home(){
             }
         }
         
-        if(position === "overviewScroll") temp = temp + 100
+        if(position === "overviewScroll") temp = temp - 50
         if(position === "scheduleScroll") temp = temp - 180
         if(position === "contactUsScroll") temp = temp - 150
 

@@ -77,9 +77,9 @@ export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
 
             </div>
                 <form onSubmit={submitBottomForm} onChange={updateFormInfo} className={firstClickBoolean ? "closed-form bottom-nav-form" : "first-closed-form bottom-nav-form" }>
-                    <label>Name</label>
+                    <label>Name <span className="asterisk">*</span></label>
                     <input placeholder="Required" required id="bottom-nav-form-name" name="name" />
-                    <label>Email</label>
+                    <label>Email <span className="asterisk">*</span></label>
                     <input placeholder="Required" required id="bottom-nav-form-email" name="email" />
                     <label>Phone Number</label>
                     <input required id="bottom-nav-form-phone" name="phone" />

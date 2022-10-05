@@ -377,7 +377,39 @@
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 750px) {
+@media screen and (orientation: landscape) and (max-width: 950px) {
+  @keyframes bottom-nav-slide {
+    0%{
+      height: 10vh;
+    }
+    100%{
+      height: 80vh;
+    }
+  }
+  @keyframes bottom-nav-slide-down {
+    0%{
+      height: 80vh;
+    }
+    100%{
+      height: 10vh;
+    }
+  }
+  @keyframes bottom-form-slide {
+    0%{
+      top: 130%;
+    }
+    100%{
+      top: 58%
+    }
+  }
+  @keyframes bottom-form-slide-down {
+    0%{
+      top: 58%
+    }
+    100%{
+      top: 130%;
+    }
+  }
   :root{
     --bottom-slide-percentage: -10vh;
   }
@@ -385,14 +417,35 @@
     flex-flow: column nowrap;
   }
   .bottom-nav-form{
-    bottom: 0;
+    padding-top: 0;
+    top: 58%;
+    margin-bottom: 0%;
+    animation: bottom-form-slide 1s;
+    height: 10%;
+  }
+  .bottom-nav-form > input{
+    padding: 0;
+  }
+  .closed-form{
+    animation: bottom-form-slide-down 1s;
+    animation-fill-mode: forwards;
+  }
+  .bottom-text-container{
+    z-index: 150;
+  }
+  .slide-down-animation{
+    height: 10vh;
+  }
+  .open-bottom-nav{
+    height: 80vh;
   }
   .bottom-nav-form > label{
-    width: 100%;
-    padding-left: 20%;
-    margin-top: 0%;
+    padding-left: 0%;
   }
   .bottom-form-submit-button{
     margin-top: 2%;
   }
+
+  
+
 }
