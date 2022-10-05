@@ -237,7 +237,7 @@
 /* Slide on Animations */
 @keyframes image-slide-left-second {
   0%{
-    transform: translateX(-80%);
+    transform: translateX(-110%);
     opacity: .1;
   }
   100%{
@@ -247,7 +247,7 @@
 }
 @keyframes image-slide-right-second {
   0%{
-    transform: translateX(80%);
+    transform: translateX(110%);
     opacity: .1;
   }
   100%{

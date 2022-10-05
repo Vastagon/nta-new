@@ -5,9 +5,30 @@ import { useEffect, useState } from "react"
 
 
 export default function HomeSlider(){
+    const [imagesLoaded, setImagesLoaded] = useState(false)
     let imageArray = [crossTrainingImage, bigBigImage, demoTeam]
     let [imageArrayPosition, setImageArrayPosition] = useState(0)
     let [isAnimationRunning, setIsAnimationRunning] = useState(false)
+
+    // useEffect(() =>{
+    //     const loadImage = image => {
+    //         return new Promise((resolve, reject) => {
+    //           const loadImg = new Image()
+    //           loadImg.src = image.url
+    //           // wait 2 seconds to simulate loading time
+    //           loadImg.onload = () =>
+    //             setTimeout(() => {
+    //               resolve(image.url)
+    //             }, 2000)
+      
+    //           loadImg.onerror = err => reject(err)
+    //         })
+    //     }
+    
+    //     Promise.all(imageArray.map(image => loadImage(image)))
+    //     .then(() => setImagesLoaded(true))
+    //     .catch(err => console.log("Failed to load images", err))
+    // }, [])
 
 
     function arrowClicked(moveThroughArray){
@@ -58,6 +79,7 @@ export default function HomeSlider(){
 
     ///Change if I change to slider
     if(!imageArray) return null
+    // if(!imagesLoaded) return null
 
     return(
         <div className="slider-containter">
