@@ -60,7 +60,7 @@ export default function HomeSlider(){
     if(!imageArray) return null
 
     return(
-        <>
+        <div className="slider-containter">
         {isAnimationRunning ? 
             <div className="slider">
                 <div id="slider-left-arrow" className="slider-left-arrow slider-arrow"></div>
@@ -74,6 +74,6 @@ export default function HomeSlider(){
                 <div id="slider-right-arrow" onClick={() => arrowClicked(1)} className="slider-right-arrow slider-arrow"></div>
             </div>
         }       
-        </>
+        </div>
     )
 }

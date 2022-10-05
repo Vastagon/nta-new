@@ -21,6 +21,17 @@
   font-family: 'Roboto', sans-serif;
   border-style: border-box;
 }
+/* Change chrome autofill color to black */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+}
+/*Change text in autofill textbox*/
+input:-webkit-autofill{
+  -webkit-text-fill-color: white !important;
+}
 .App{
   position: absolute;
   top: 0;
@@ -406,6 +417,12 @@
 
 
 /* Home Slider */
+.slider-containter{
+  width: 98vw;
+  margin-left: 1vw;
+  overflow: hidden;
+  height: auto;
+}
 .slider{
   position: relative;
   width: 70%;
@@ -493,17 +510,17 @@
 /* Slide on Animations */
 @keyframes image-slide-left-second {
   0%{
-    transform: translateX(-21%);
+    transform: translateX(-70%);
     opacity: .1;
   }
-  100%{ /*50*/
+  100%{ 
     opacity: 1;
     transform: translateX(0%);
   }
 }
 @keyframes image-slide-right-second {
   0%{
-    transform: translateX(21%);
+    transform: translateX(70%);
     opacity: .1;
   }
   100%{
