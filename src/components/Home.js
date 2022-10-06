@@ -20,11 +20,12 @@ export default function Home(){
         document.querySelectorAll(".nav-close").forEach((checkedElements) =>{
             // console.log("CLICKED")
             if(!checkedElements.classList.contains("home")){
+                ///The actual listener here
                 checkedElements.addEventListener("click", ()=>{
                     if(showMobileNav){
                         setShowMobileNav(false)
                     }
-                    if(showBottomNav){
+                    if(!showBottomNav){
                         setShowBottomNav(false)
                     }
                 })                  
@@ -32,7 +33,6 @@ export default function Home(){
         })
 
     }, [])
-    
 
     function clickScrollTo(position){
         let element = document.getElementById(position)

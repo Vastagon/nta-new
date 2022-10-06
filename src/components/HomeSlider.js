@@ -1,6 +1,6 @@
 import crossTrainingImage from "../sliderImages/taekwondoCrosstraining.webp"
 import bigBigImage from "../sliderImages/bigTaekwondoTraining.jpg"
-import demoTeam from "../sliderImages/taekwondoDemoteam.jpeg"
+import demoTeam from "../sliderImages/taekwondoDemoteam2.webp"
 import { useEffect, useState } from "react"
 
 
@@ -10,25 +10,26 @@ export default function HomeSlider(){
     let [imageArrayPosition, setImageArrayPosition] = useState(0)
     let [isAnimationRunning, setIsAnimationRunning] = useState(false)
 
-    // useEffect(() =>{
-    //     const loadImage = image => {
-    //         return new Promise((resolve, reject) => {
-    //           const loadImg = new Image()
-    //           loadImg.src = image.url
-    //           // wait 2 seconds to simulate loading time
-    //           loadImg.onload = () =>
-    //             setTimeout(() => {
-    //               resolve(image.url)
-    //             }, 2000)
+    useEffect(() =>{
+        const loadImage = image => {
+            return new Promise((resolve, reject) => {
+              const loadImg = new Image()
+              loadImg.src = image.url
+              // wait 2 seconds to simulate loading time
+              loadImg.onload = () =>
+                setTimeout(() => {
+                  resolve(image.url)
+                }, 2000)
       
-    //           loadImg.onerror = err => reject(err)
-    //         })
-    //     }
+              loadImg.onerror = err => reject(err)
+            })
+        }
     
-    //     Promise.all(imageArray.map(image => loadImage(image)))
-    //     .then(() => setImagesLoaded(true))
-    //     .catch(err => console.log("Failed to load images", err))
-    // }, [])
+        ///Runs the function
+        Promise.all(imageArray.map(image => loadImage(image)))
+        .then(() => setImagesLoaded(true))
+        .catch(err => console.log("Failed to load images", err))
+    }, [])
 
 
     function arrowClicked(moveThroughArray){
@@ -65,7 +66,7 @@ export default function HomeSlider(){
             document.getElementById("home-slider-image").classList.remove("image-slide-right-second")
         }, 1600)
 
-    }
+    } 
 
     ///Loops imageArrayPosition to ends of the array
     useEffect(() =>{

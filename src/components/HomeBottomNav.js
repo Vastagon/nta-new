@@ -40,7 +40,6 @@ export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
             setFirstClickBoolean(true)
         }
     }
-    console.log(firstClickBoolean)
     
     return(
         <>
