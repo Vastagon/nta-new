@@ -9,10 +9,34 @@ import Reviews from "./Reviews"
 import ContactUs from "./ContactUs"
 import MobileNav from "./MobileNav";
 import { useEffect, useState } from "react";
+import crossTrainingImage from "../sliderImages/taekwondoCrosstraining.webp"
+import bigBigImage from "../sliderImages/bigTaekwondoTraining.jpg"
+import demoTeam from "../sliderImages/taekwondoDemoteam2.webp"
+
 
 export default function Home(){
     const [showMobileNav, setShowMobileNav] = useState(false)
     const [showBottomNav, setShowBottomNav] = useState(false)
+    const [imageArray, setImageArray] = useState([crossTrainingImage, bigBigImage, demoTeam])
+    const [showPage, setShowPage] = useState(false)
+
+    ///Preload slider images
+    useEffect(() =>{
+        function preloadImages(srcs) {
+            if (!preloadImages.cache) {
+                preloadImages.cache = [];
+            }
+            var img;
+            for (var i = 0; i < srcs.length; i++) {
+                img = new Image();
+                img.src = srcs[i];
+                preloadImages.cache.push(img);
+            }
+            setShowPage(true)
+        }
+                
+        preloadImages(imageArray);
+    }, [])
 
 
     useEffect(() =>{
@@ -62,16 +86,18 @@ export default function Home(){
         }
     }
 
-    // if(isMobileDevice === null) return null
-
-    return(
+    if(!showPage){
+        return null
+    }else{
+    return( 
         <>
             <div className="home nav-close">
                 <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} />
 
                 <div id="everything-except-navbar">
-                <HomeSlider />
-{/* 
+                <HomeSlider imageArray={imageArray} />
+
+                {/* 
                 <div className="home-container nav-close">
                     <h2 className="home-title">NTA Taekwondo</h2>
                     <p id="overviewScroll" className="home-content">The NTA Taekwondo Center has classes oriented for both children and adults. The 
@@ -102,4 +128,5 @@ export default function Home(){
         </>
 
     )
+    }
 }
