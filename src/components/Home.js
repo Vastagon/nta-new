@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import crossTrainingImage from "../sliderImages/taekwondoCrosstraining.webp"
 import bigBigImage from "../sliderImages/bigTaekwondoTraining.jpg"
 import demoTeam from "../sliderImages/taekwondoDemoteam2.webp"
+import LoadingPage from "./LoadingPage";
 
 
 export default function Home(){
@@ -87,7 +88,7 @@ export default function Home(){
     }
 
     if(!showPage){
-        return null
+        return <LoadingPage />
     }else{
     return( 
         <>
@@ -124,9 +125,7 @@ export default function Home(){
             </div> 
 
         {showMobileNav ? <MobileNav clickScrollTo={clickScrollTo} /> : null}
-
         </>
-
     )
     }
 }
