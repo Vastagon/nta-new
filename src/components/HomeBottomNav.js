@@ -1,5 +1,7 @@
 import { useState } from "react"
 import * as emailjs from 'emailjs-com'
+import LoadingPage from "./LoadingPage"
+import Spinner from "./Spinner"
 ///variable that gets set to true after the first time bottom nav is clicked. That changes what classes are chosen
 
 export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
@@ -89,12 +91,9 @@ export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
             }  
 
             {bottomFormSendingEmail ? 
-            <div className="spinner-container">
-                <div className="loading-spinner"></div>
-                <div className="loading-text">Don't leave this page</div>
-            </div>            
+                <Spinner />         
             :
-            null
+                null
             }   
         </>
 

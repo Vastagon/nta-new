@@ -82,17 +82,21 @@
 .loading-text{
   
 }
-.spinner-container{
+/* .spinner-container{
   position: fixed;
-  top: 43%;
-  left: 31.5%;
-  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nta-green);
+  color: white;
   width: 30vw;
-  height: 10vh;
-  padding-top: 1%;
-  padding-bottom: 4%;
+  height: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
   z-index: 101;
-}
+  top: 35%;
+} */
 .form-label{
   margin-top: .5rem;
 }

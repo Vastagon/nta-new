@@ -8,6 +8,7 @@ import {
     FormGroup,
     Button,
 } from "reactstrap"
+import Spinner from "./Spinner";
 
 
 export default function ContactUs(){
@@ -17,7 +18,7 @@ export default function ContactUs(){
     const [formCard, setFormCard] = useState(
         <Form onSubmit={sendEmail} className="contact-form" style={{borderRadius: "10px", borderWidth: "1px", borderStyle: "solid", padding: "1rem"}}>
         <FormGroup>
-            <Label for="name">Name</Label>
+            <Label for="name">Name <span className="asterisk">*</span></Label>
             <Input 
                 type= "text"
                 name="name"
@@ -33,11 +34,10 @@ export default function ContactUs(){
                 name= "phone"
                 onChange={updateForm}
                 value={formInput.phone}
-                required
                 placeholder="Phone Number"
             />
 
-            <Label for="email">Email</Label>
+            <Label for="email">Email <span className="asterisk">*</span></Label>
             <Input 
                 type= "email"
                 name="email"
@@ -61,7 +61,7 @@ export default function ContactUs(){
         setFormCard(
             <Form onSubmit={sendEmail} className="contact-form" style={{borderRadius: "10px", borderWidth: "1px", borderStyle: "solid", borderColor: "gray", padding: "1rem"}}>
             <FormGroup>
-                <Label for="name">Name</Label>
+                <Label for="name">Name <span className="asterisk">*</span></Label>
                 <Input 
                     type= "text"
                     name="name"
@@ -78,12 +78,11 @@ export default function ContactUs(){
                     name= "phone"
                     onChange={updateForm}
                     value={formInput.phone}
-                    required
                     placeholder="Phone Number"
                     id="number"
                 />
 
-                <Label for="email">Email</Label>
+                <Label for="email">Email <span className="asterisk">*</span></Label>
                 <Input 
                     type= "email"
                     name="email"
@@ -144,10 +143,7 @@ export default function ContactUs(){
                 {formCard}
 
                 {currentlySendingEmail ? 
-                <div className="spinner-container">
-                    <div className="loading-spinner"></div>
-                    <div className="loading-text">Don't leave this page</div>
-                </div>            
+                    <Spinner />            
                 :
                 null
                 }   
