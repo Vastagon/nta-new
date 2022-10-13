@@ -1,6 +1,5 @@
 import { useState } from "react"
 import * as emailjs from 'emailjs-com'
-import LoadingPage from "./LoadingPage"
 import Spinner from "./Spinner"
 ///variable that gets set to true after the first time bottom nav is clicked. That changes what classes are chosen
 

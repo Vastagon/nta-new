@@ -44,20 +44,31 @@ export default function Home(){
         ///Adds click event listeners so mobile nav can exit when click outside of
         document.querySelectorAll(".nav-close").forEach((checkedElements) =>{
             // console.log("CLICKED")
-            if(!checkedElements.classList.contains("home")){
+            // if(!checkedElements.classList.contains("home")){
                 ///The actual listener here
                 checkedElements.addEventListener("click", ()=>{
                     if(showMobileNav){
                         setShowMobileNav(false)
+                        // console.log("Mobile set to false")
                     }
                     if(!showBottomNav){
                         setShowBottomNav(false)
+                        // console.log("Bottom set to false")
                     }
                 })                  
-            }
+            // }
         })
 
     }, [])
+
+
+    useEffect(() =>{
+
+    }, [])
+
+    console.log("Bot nav: " + showBottomNav)
+    console.log("Mobile nav: " + showMobileNav)
+
 
     function clickScrollTo(position){
         let element = document.getElementById(position)
@@ -87,12 +98,13 @@ export default function Home(){
         }
     }
 
+
     if(!showPage){
         return <LoadingPage />
     }else{
     return( 
         <>
-            <div className="home nav-close">
+            <div className="home">
                 <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} />
 
                 <div id="everything-except-navbar">
