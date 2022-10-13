@@ -46,9 +46,6 @@ export default function Reviews(){
             </div>
 
             <div id="contactUsScroll"></div>
-            
-
-            {/* <Footer /> */}
         </div>
     )
 }

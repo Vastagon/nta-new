@@ -110,8 +110,6 @@ export default function ContactUs(){
             setCurrentlySendingEmail(false)
             alert("Message Sent")
             setFormInput({name: "", phone: "", email: ""})
-            // changeFormCard()
-
         }, (err) => {
             console.log('FAILED...', err);
             setCurrentlySendingEmail(false)

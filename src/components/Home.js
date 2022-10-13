@@ -38,47 +38,23 @@ export default function Home(){
                 
         preloadImages(imageArray);
     }, [])
-
-
-    useEffect(() =>{
-        ///Adds click event listeners so mobile nav can exit when click outside of
-        document.querySelectorAll(".nav-close").forEach((checkedElements) =>{
-            // console.log("CLICKED")
-            // if(!checkedElements.classList.contains("home")){
-                ///The actual listener here
-                checkedElements.addEventListener("click", ()=>{
-                    if(showMobileNav){
-                        setShowMobileNav(false)
-                        // console.log("Mobile set to false")
-                    }
-                    if(!showBottomNav){
-                        setShowBottomNav(false)
-                        // console.log("Bottom set to false")
-                    }
-                })                  
-            // }
-        })
-
-    }, [])
-
+ 
 
     useEffect(() =>{
-
-    }, [])
-
-    console.log("Bot nav: " + showBottomNav)
-    console.log("Mobile nav: " + showMobileNav)
-
+        document.querySelector("#everything-except-navbar")?.addEventListener("click", () =>{
+            if(!showMobileNav){
+                setShowMobileNav(false)
+            }
+            if(!showBottomNav){
+                setShowBottomNav(false)
+            }
+        }) 
+    }, [showPage])
 
     function clickScrollTo(position){
         let element = document.getElementById(position)
         let temp = element.offsetTop - element.scrollTop
 
-        ///Change amount of scroll if necessary
-        // if(position === "scheduleScroll") temp = temp - (appHeight/32)
-        // if(position === "programsScroll") temp = temp + (appHeight/100)
-        // if(position === "overviewScroll") temp = temp + (appHeight/50)
-        // if(position === "contactUsScroll") temp = temp - (appHeight/100)
         if(position === "programsScroll"){
             temp = temp + 150
             if(window.innerWidth < 1450){
@@ -98,6 +74,7 @@ export default function Home(){
         }
     }
 
+    
 
     if(!showPage){
         return <LoadingPage />

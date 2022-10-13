@@ -1,7 +1,7 @@
 import { useState } from "react"
 import * as emailjs from 'emailjs-com'
 import Spinner from "./Spinner"
-///variable that gets set to true after the first time bottom nav is clicked. That changes what classes are chosen
+
 
 export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
     const [bottomFormSendingEmail, setBottomFormSendingEmail] = useState(false)
@@ -25,8 +25,6 @@ export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
             setBottomFormSendingEmail(false)
             alert("Message Sent")
             setBottomFormInfo({name: "", phone: "", email: ""})
-            // changeFormCard()
-
         }, (err) => {
             console.log('FAILED...', err);
             setBottomFormSendingEmail(false)
@@ -67,6 +65,7 @@ export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
             </form>      
             </>
             :
+            // While Closed
             <>
             <div onClick={!bottomFormSendingEmail ? toggleBottomNav : null} className={firstClickBoolean ? "slide-down-animation show-hover bottom-nav" : "show-hover bottom-nav"}>
 

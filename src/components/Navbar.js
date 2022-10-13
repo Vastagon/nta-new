@@ -23,24 +23,7 @@ export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav})
         window.addEventListener("resize", () =>{
             setInnerSizes({height: window.innerHeight, width: window.innerWidth})
         })
-
-        // /* Storing user's device details in a variable*/
-        // let details = navigator.userAgent;
-
-        // /* Creating a regular expression 
-        // containing some mobile devices keywords 
-        // to search it in details string*/
-        // let regexp = /android|iPhone|iphone|kindle|Ipad|ipad/i;
-
-        // /* Using test() method to search regexp in details
-        // it returns boolean value*/
-        // setIsMobileDevice(regexp.test(details))
     }, [])        
-
-
-    // useEffect(() =>{
-    //     let appHeight = document.getElementById("app")?.offsetHeight
-    // }, [])
 
     let openMobileNav = () =>{
         setShowMobileNav(prev => !prev)
@@ -56,7 +39,6 @@ export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav})
     }
 
 
-//if (!isMobileDevice) show blank else show blank
     if(!innerSizes) return null
 
     return(
