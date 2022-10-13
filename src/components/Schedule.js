@@ -19,7 +19,6 @@ export default function Schedule(){
         })
         window.addEventListener("change", () =>{
             setScreenOrientation(window?.screen?.orientation?.type)
-            console.log("erer")
         })
     }, [])
 

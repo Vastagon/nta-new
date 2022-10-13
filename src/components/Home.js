@@ -45,10 +45,18 @@ export default function Home(){
             if(!showMobileNav){
                 setShowMobileNav(false)
             }
+        }) 
+
+        document.querySelector("#everything-except-bottom-nav")?.addEventListener("click", () =>{
             if(!showBottomNav){
                 setShowBottomNav(false)
             }
-        }) 
+        })
+        document.querySelector(".mynav")?.addEventListener("click", () =>{
+            if(!showBottomNav){
+                setShowBottomNav(false)
+            }
+        })
     }, [showPage])
 
     function clickScrollTo(position){
@@ -85,6 +93,7 @@ export default function Home(){
                 <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} />
 
                 <div id="everything-except-navbar">
+                <div id="everything-except-bottom-nav">
                 <HomeSlider imageArray={imageArray} />
 
                 {/* 
@@ -107,6 +116,7 @@ export default function Home(){
                 <Schedule />
                 <Reviews />
                 <ContactUs />
+                </div>
 
                 <HomeBottomNav showBottomNav={showBottomNav} setShowBottomNav={setShowBottomNav}/>
                 <Footer clickScrollTo={clickScrollTo}/>
