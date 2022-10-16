@@ -37,11 +37,11 @@ export default function ContactUs(){
 
     return(
         <>
-        <h3 style={{textAlign: "center"}}>Give us your Information</h3>
+        <h3 style={{textAlign: "center"}}>Contact Us</h3>
             <div className="contact-us nav-close">
                 <div className='contactus-card'>
                     <div className='contact-info'>
-                        <h4>Contact Us</h4>
+                        <h4>Contact Info</h4>
                         <div>3000 Grapevine Mills Pkwy, Grapevine, Texas</div>
                         <div>ntataekwondo@gmail.com</div>
                         <div>(972) 471-2333</div>
