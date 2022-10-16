@@ -8,11 +8,13 @@ import Schedule from "./Schedule"
 import Reviews from "./Reviews"
 import ContactUs from "./ContactUs"
 import MobileNav from "./MobileNav";
+import LoadingPage from "./LoadingPage";
+
 import { useEffect, useState } from "react";
+
 import crossTrainingImage from "../sliderImages/taekwondoCrosstraining.webp"
 import bigBigImage from "../sliderImages/bigTaekwondoTraining.jpg"
 import demoTeam from "../sliderImages/taekwondoDemoteam2.webp"
-import LoadingPage from "./LoadingPage";
 
 
 export default function Home(){
@@ -70,6 +72,7 @@ export default function Home(){
             }
         }
         
+        ///Position changes for scroll points
         if(position === "overviewScroll") temp = temp - 50
         if(position === "scheduleScroll") temp = temp - 180
         if(position === "contactUsScroll") temp = temp - 150

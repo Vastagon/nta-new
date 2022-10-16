@@ -1,36 +1,4 @@
 /* Contact Form */
-.contact-input{
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  color: white;
-  background-color: seagreen;
-  padding-bottom: 1rem;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: gray;
-  border-width: 2px;
-  margin-left: 5%;
-}
-.contact-form{
-  border-color: var(--scheme-gray) !important;
-  width: 33%;
-}
-.contact-input > form > input{
-  margin-top: 1rem;
-  width: 80%;
-  padding: 10px 5px;
-}
-.contact-input > form > button{
-  width: 50%;
-  padding: 10px 5px;
-  margin-top: 2rem;
-}
-.contact-input-title{
-  color: var(--scheme-black);
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
 .contact-us{
   display: flex;
   justify-content: center;
@@ -39,6 +7,9 @@
   gap: 5%;
 }
 .contactus-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-color: var(--scheme-gray);
   border-style: solid;
   border-width: 1px;
@@ -47,6 +18,7 @@
   padding-right: 2rem;
   padding-bottom: 5%;
   padding-top: 5%;
+  width: 70%;
 }
 .contactus-card > h4{
   font-size: 1.6rem;
@@ -59,7 +31,28 @@
   margin-top: 1rem;
   font-size: 1.4rem;
 }
+.contact-us-form{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  width: 60%;
+}
+.contact-us-form > input{
 
+}
+.contact-us-form > label{
+  text-align: left;
+}
+.contact-us-form > button{
+  margin-top: 5%;
+  width: 40%;
+  padding: 1rem;
+
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
 
 
 @keyframes spinner {
@@ -79,24 +72,6 @@
   animation: spinner 1.5s linear infinite;
   margin: auto;
 }
-.loading-text{
-  
-}
-/* .spinner-container{
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--nta-green);
-  color: white;
-  width: 30vw;
-  height: auto;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  z-index: 101;
-  top: 35%;
-} */
 .form-label{
   margin-top: .5rem;
 }

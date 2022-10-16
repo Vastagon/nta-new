@@ -1,104 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import * as emailjs from 'emailjs-com'
-
-import {
-    Form,
-    Label,
-    Input,
-    FormGroup,
-    Button,
-} from "reactstrap"
 import Spinner from "./Spinner";
 
 
 export default function ContactUs(){
     const [currentlySendingEmail, setCurrentlySendingEmail] = useState(false)
     const [formInput, setFormInput] = useState({})
-
-    const [formCard, setFormCard] = useState(
-        <Form onSubmit={sendEmail} className="contact-form" style={{borderRadius: "10px", borderWidth: "1px", borderStyle: "solid", padding: "1rem"}}>
-        <FormGroup>
-            <Label for="name">Name <span className="asterisk">*</span></Label>
-            <Input 
-                type= "text"
-                name="name"
-                onChange={updateForm}
-                value={formInput.name}
-                required
-                placeholder="Name"
-            />
-
-            <Label for="phone">Phone Number</Label>
-            <Input 
-                type= "phone"
-                name= "phone"
-                onChange={updateForm}
-                value={formInput.phone}
-                placeholder="Phone Number"
-            />
-
-            <Label for="email">Email <span className="asterisk">*</span></Label>
-            <Input 
-                type= "email"
-                name="email"
-                onChange={updateForm}
-                value={formInput.email}
-                required
-                placeholder="Email"
-            />
-        </FormGroup>
-
-        <Button>Submit</Button>
-    </Form>
-    )
-
-
-    useEffect(() =>{
-        changeFormCard()
-    }, [formInput])
-
-    function changeFormCard(){
-        setFormCard(
-            <Form onSubmit={sendEmail} className="contact-form" style={{borderRadius: "10px", borderWidth: "1px", borderStyle: "solid", borderColor: "gray", padding: "1rem"}}>
-            <FormGroup>
-                <Label for="name">Name <span className="asterisk">*</span></Label>
-                <Input 
-                    type= "text"
-                    name="name"
-                    onChange={updateForm}
-                    value={formInput.name}
-                    required
-                    placeholder="Name"
-                    id="name"
-                />
-
-                <Label for="phone">Phone Number</Label>
-                <Input 
-                    type= "phone"
-                    name= "phone"
-                    onChange={updateForm}
-                    value={formInput.phone}
-                    placeholder="Phone Number"
-                    id="number"
-                />
-
-                <Label for="email">Email <span className="asterisk">*</span></Label>
-                <Input 
-                    type= "email"
-                    name="email"
-                    onChange={updateForm}
-                    value={formInput.email}
-                    required
-                    placeholder="Email"
-                    id="email"
-                />
-            </FormGroup>
-
-            <Button>Submit</Button>
-            </Form>
-        )
-    }
-
 
     function sendEmail(e){
         e.preventDefault()
@@ -110,6 +17,10 @@ export default function ContactUs(){
             setCurrentlySendingEmail(false)
             alert("Message Sent")
             setFormInput({name: "", phone: "", email: ""})
+            ///Empty form inputs
+            document.getElementById("name").value = ""
+            document.getElementById("email").value = ""
+            document.getElementById("phone").value = ""
         }, (err) => {
             console.log('FAILED...', err);
             setCurrentlySendingEmail(false)
@@ -124,21 +35,32 @@ export default function ContactUs(){
         }))
     }
 
-
     return(
         <>
         <h3 style={{textAlign: "center"}}>Give us your Information</h3>
             <div className="contact-us nav-close">
                 <div className='contactus-card'>
-                    <h4>Contact Us</h4>
                     <div className='contact-info'>
+                        <h4>Contact Us</h4>
                         <div>3000 Grapevine Mills Pkwy, Grapevine, Texas</div>
                         <div>ntataekwondo@gmail.com</div>
                         <div>(972) 471-2333</div>
                     </div>
-                </div>
 
-                {formCard}
+
+                    <form onSubmit={sendEmail} className="contact-us-form">
+                        <label>Name <span className="asterisk">*</span></label>
+                        <input id="name" onChange={updateForm} name="name" type="text" />
+
+                        <label>Email <span className="asterisk">*</span></label>
+                        <input id="email" onChange={updateForm} name="email" type="text" />
+
+                        <label>Phone</label>
+                        <input id="phone" onChange={updateForm} name="phone" type="text" />
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
 
                 {currentlySendingEmail ? 
                     <Spinner />            
