@@ -21,6 +21,10 @@
   font-family: 'Roboto', sans-serif;
   border-style: border-box;
 }
+h1,h2,h3,h4{
+  /* font-family: 'Raleway', monospace; */
+  font-family: 'Nunito', monospace;
+}
 /* Change chrome autofill color to black */
 .bottom-nav-form > input:-webkit-autofill,
 .bottom-nav-form > input:-webkit-autofill:hover, 
@@ -472,8 +476,7 @@
 
 /* Home Slider */
 .slider-containter{
-  width: 98vw;
-  margin-left: 1vw;
+  width: 100%;
   overflow: hidden;
   height: auto;
 }

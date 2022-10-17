@@ -174,7 +174,9 @@
     .programs-card:nth-child(1){
         border-style: none;
     }
-
+    .programs-card > p{
+        font-size: 1rem;
+    }
 
 
     .contact-us{
@@ -185,6 +187,9 @@
     .contact-form{
         margin-top: 5%;
         width: auto;
+    }
+    .contactus-card{
+        width: 100%;
     }
 }
 

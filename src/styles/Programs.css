@@ -42,7 +42,7 @@
 }
 .programs-card{
   width: 33.33333%;
-  height: 85vh;
+  height: auto;
   padding: 1rem;
   padding-left: .5rem;
   padding-right: .5rem;

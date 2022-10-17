@@ -1,7 +1,5 @@
-.overview{
+/* .overview{
     width: 65%;
-    /* background-color: #A9A9A9; */
-    /* background-color: #145434; */
     background-image: linear-gradient(#145434, #185434);
     color: white;
     margin-left: 35%;
@@ -17,6 +15,18 @@
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 2rem;
+} */
+.overview{
+    width: 60%;
+    margin-left: 20%;
+    background-color: var(--nta-green);
+    border-radius: 20px;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 5%;
+    color: white;
 }
 
 

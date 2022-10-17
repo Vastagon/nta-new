@@ -3,6 +3,7 @@
 export default function AfterSchool(){
     return(
         <div className="after-school nav-close">
+            {/* <img src={require("../images/NTALogo.webp")} /> */}
             <div className="overview">
                 <h2>Overview</h2>
                 <p>The NTA Taekwondo Center has classes oriented for both children and adults. The energetic atmosphere of our programs and our 

@@ -44,6 +44,7 @@ export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav})
     return(
         <div className="mynav">
             <img alt="NTA Taekwondo Logo" onClick={() => clickScrollTo("root")} src={NTALogo} className="icon nav-tab" />
+            {/* <h1 style={{color: "white"}}>NTA Taekwondo Academy</h1> */}
 
             {(innerSizes.width <= 950 || innerSizes.height < 425) ? 
             // Mobile Navbar
