@@ -15,7 +15,6 @@ import { useEffect, useState } from 'react';
 
 
 export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav}){
-    const [isMobileDevice, setIsMobileDevice] = useState()
     const [innerSizes, setInnerSizes] = useState({height: window.innerHeight, width: window.innerWidth})
 
     useEffect(() =>{

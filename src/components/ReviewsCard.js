@@ -1,4 +1,3 @@
-import {Card, CardBody, CardText, CardFooter} from "reactstrap"
 
 
 export default function ReviewsCard(props){
@@ -11,18 +10,5 @@ export default function ReviewsCard(props){
                 <p>{props.reviewer}</p>
             </div>
         </div>
-
-
-
-    // <Card
-    //     className="my-2"
-    //     color="dark"
-    //     outline
-    // >
-    //     <CardBody>
-    //         <CardText>{props.content}</CardText>
-    //     </CardBody>
-    //     <CardFooter>{props.reviewer}</CardFooter>
-    // </Card>
     )
 }

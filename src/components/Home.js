@@ -66,16 +66,17 @@ export default function Home(){
         let temp = element.offsetTop - element.scrollTop
 
         if(position === "programsScroll"){
-            temp = temp + 150
+            temp = temp + 175
             if(window.innerWidth < 1450){
                 temp = temp - 100
             }
         }
         
         ///Position changes for scroll points
-        if(position === "overviewScroll") temp = temp - 50
+        if(position === "overviewScroll") temp = temp - 150
         if(position === "scheduleScroll") temp = temp - 180
         if(position === "contactUsScroll") temp = temp - 150
+        if(position === "reviewsScroll") temp = temp - 50
 
         window.scrollTo(0, temp)
 
