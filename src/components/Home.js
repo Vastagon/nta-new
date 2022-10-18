@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import crossTrainingImage from "../sliderImages/taekwondoCrosstraining.webp"
 import bigBigImage from "../sliderImages/bigTaekwondoTraining.jpg"
 import demoTeam from "../sliderImages/taekwondoDemoteam2.webp"
+import FailedEmail from "./FailedEmail";
 
 
 export default function Home(){
@@ -97,6 +98,13 @@ export default function Home(){
                 <WebsiteNavbar showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} clickScrollTo={clickScrollTo} />
 
                 <div id="everything-except-navbar">
+                <h1 className="nta-title"
+                    style={{
+                        position: "relative",
+                        top: "12.5vh",
+                        textAlign: "center"
+                    }}
+                >NTA Taekwondo</h1>
                 <div id="everything-except-bottom-nav">
                 <HomeSlider imageArray={imageArray} />
 

@@ -1,12 +1,14 @@
 import { useState } from "react"
 import * as emailjs from 'emailjs-com'
 import Spinner from "./Spinner"
+import FailedEmail from "./FailedEmail"
 
 
 export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
     const [bottomFormSendingEmail, setBottomFormSendingEmail] = useState(false)
     const [bottomFormInfo, setBottomFormInfo] = useState()
     const [firstClickBoolean, setFirstClickBoolean] = useState(false)
+    const [showFailedCard, setShowFailedCard] = useState(false)
 
     function updateFormInfo(e){
         setBottomFormInfo(prev => ({
@@ -19,16 +21,15 @@ export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
         e.preventDefault()
         ///Uses emailjs to send email
         setBottomFormSendingEmail(true)
-        emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, bottomFormInfo, process.env.REACT_APP_PUBLIC_KEY)
+        emailjs.send("process.env.REACT_APP_SERVICE_ID", process.env.REACT_APP_TEMPLATE_ID, bottomFormInfo, process.env.REACT_APP_PUBLIC_KEY)
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
             setBottomFormSendingEmail(false)
-            alert("Message Sent")
             setBottomFormInfo({name: "", phone: "", email: ""})
         }, (err) => {
             console.log('FAILED...', err);
             setBottomFormSendingEmail(false)
-            alert("Error, message not sent")
+            setShowFailedCard(true)
         });
     }
 
@@ -88,11 +89,20 @@ export default function HomeBottomNav({showBottomNav, setShowBottomNav}){
             </>
             }  
 
-            {bottomFormSendingEmail ? 
-                <Spinner />         
-            :
-                null
-            }   
+
+            {
+                bottomFormSendingEmail ? 
+                    <Spinner />         
+                :
+                    null
+            } 
+
+            {
+                showFailedCard ? 
+                    <FailedEmail setShowFailedCard={setShowFailedCard}/>
+                :
+                    null
+            }
         </>
 
 

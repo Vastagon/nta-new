@@ -445,6 +445,11 @@ h1,h2,h3,h4{
   color: white;
   padding: 1rem;
 }
+.nta-title{
+  position: "relative";
+  top: "12.5vh";
+  text-align: "center";
+}
 .home-title{
   text-align: center;
   position: relative;
@@ -476,16 +481,19 @@ h1,h2,h3,h4{
 
 /* Home Slider */
 .slider-containter{
+  position: relative;
   width: 100%;
   overflow: hidden;
   height: auto;
+  margin-top: 15vh;
 }
 .slider{
   position: relative;
   width: 70%;
   height: 55vh;
+  /* height: auto; */
   margin-left: 15%;
-  margin-top: 10%;
+  margin-top: 0%;
   margin-bottom: 5%;
 
   display: flex;
@@ -496,7 +504,7 @@ h1,h2,h3,h4{
   border-radius: 30px;
   width: 100%;
   height: auto;
-  max-height: 60vh;
+  max-height: 55vh;
   position: relative;
   z-index: 0;
 }
@@ -604,12 +612,21 @@ footer{
   width: 100%;
   z-index: 0;
   padding-bottom: 10%;
-
+}
+.footer-icon{
+  width: auto;
+  height: 60%;
+  margin-left: -5%;
+  margin-right: 2rem;
+  padding-left: 6rem;
 }
 .footer-segment{
   color: white;
-  margin-top: 10%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: left;
 }
 .facebook-icon{
   width: 10%;
@@ -642,6 +659,7 @@ footer{
 }
 .contactus-footer{
   text-align: left;
+  margin-top: -5.5vh;
 }
 .follow-us{
   width: 10rem;
@@ -664,10 +682,36 @@ footer{
   /* color: #115633; */
   /* color: green; */
 }
-.footer-icon{
-  width: auto;
-  height: 60%;
-  margin-left: -5%;
-  margin-right: 2rem;
-  padding-left: 6rem;
+.contactus-map{
+  margin-top: 30px;
+}
+
+
+
+
+
+.failed-email-card-container{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+}
+.failed-email-card{
+  background-color: var(--nta-green);
+  width: 40%;
+  height: auto;
+  border-radius: 30px;
+  padding: 2rem;
+  color: white;
+}
+.failed-email-card > button{
+  float: right;
+  padding: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
