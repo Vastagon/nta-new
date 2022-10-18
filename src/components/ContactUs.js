@@ -3,7 +3,7 @@ import * as emailjs from 'emailjs-com'
 import Spinner from "./Spinner";
 
 
-export default function ContactUs(){
+export default function ContactUs({setShowFailedCard, setShowAcceptedCard}){
     const [currentlySendingEmail, setCurrentlySendingEmail] = useState(false)
     const [formInput, setFormInput] = useState({})
 
@@ -15,7 +15,7 @@ export default function ContactUs(){
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
             setCurrentlySendingEmail(false)
-            alert("Message Sent")
+            setShowAcceptedCard(true)
             setFormInput({name: "", phone: "", email: ""})
             ///Empty form inputs
             document.getElementById("name").value = ""
@@ -24,7 +24,7 @@ export default function ContactUs(){
         }, (err) => {
             console.log('FAILED...', err);
             setCurrentlySendingEmail(false)
-            alert("Error, message not sent")
+            setShowFailedCard(true)
         });
     }
     ///Updates state component

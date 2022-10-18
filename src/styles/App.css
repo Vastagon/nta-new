@@ -384,7 +384,7 @@ h1,h2,h3,h4{
   height: auto;
   padding-top: 5%;
   padding-bottom: 5%;
-  z-index: 101;
+  z-index: 11000;
   border-radius: 10px;
 }
 .spinner-container{
@@ -395,6 +395,8 @@ h1,h2,h3,h4{
   justify-content: center;
   position: fixed;
   top: 0;
+  z-index: 11000;
+
   left: 0;
 }
 .inner-spinner-page-container{
@@ -408,6 +410,8 @@ h1,h2,h3,h4{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  z-index: 11000;
+
 }
 .sending-email-spinner{
   position: relative;
@@ -699,7 +703,7 @@ footer{
   left: 0;
   height: 100vh;
   width: 100vw;
-  z-index: 1000;
+  z-index: 10000;
 }
 .failed-email-card{
   background-color: var(--nta-green);

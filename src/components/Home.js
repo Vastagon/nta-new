@@ -15,7 +15,6 @@ import { useEffect, useState } from "react";
 import crossTrainingImage from "../sliderImages/taekwondoCrosstraining.webp"
 import bigBigImage from "../sliderImages/bigTaekwondoTraining.jpg"
 import demoTeam from "../sliderImages/taekwondoDemoteam2.webp"
-import FailedEmail from "./FailedEmail";
 
 
 export default function Home(){
@@ -23,6 +22,9 @@ export default function Home(){
     const [showBottomNav, setShowBottomNav] = useState(false)
     const [imageArray, setImageArray] = useState([crossTrainingImage, bigBigImage, demoTeam])
     const [showPage, setShowPage] = useState(false)
+    const [showFailedCard, setShowFailedCard] = useState(false)
+    const [showAcceptedCard, setShowAcceptedCard] = useState(false)
+
 
     ///Preload slider images
     useEffect(() =>{
@@ -104,7 +106,7 @@ export default function Home(){
                         top: "12.5vh",
                         textAlign: "center"
                     }}
-                >NTA Taekwondo</h1>
+                >Welcome to NTA Taekwondo</h1>
                 <div id="everything-except-bottom-nav">
                 <HomeSlider imageArray={imageArray} />
 
@@ -127,10 +129,10 @@ export default function Home(){
                 <Programs />
                 <Schedule />
                 <Reviews />
-                <ContactUs />
+                <ContactUs showFailedCard={showFailedCard} setShowFailedCard={setShowFailedCard} showAcceptedCard={showAcceptedCard} setShowAcceptedCard={setShowAcceptedCard} />
                 </div>
 
-                <HomeBottomNav showBottomNav={showBottomNav} setShowBottomNav={setShowBottomNav}/>
+                <HomeBottomNav showFailedCard={showFailedCard} setShowFailedCard={setShowFailedCard} showAcceptedCard={showAcceptedCard} setShowAcceptedCard={setShowAcceptedCard} showBottomNav={showBottomNav} setShowBottomNav={setShowBottomNav}/>
                 <Footer clickScrollTo={clickScrollTo}/>
                 </div>
             </div> 
