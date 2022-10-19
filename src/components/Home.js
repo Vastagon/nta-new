@@ -68,12 +68,12 @@ export default function Home(){
         let element = document.getElementById(position)
         let temp = element.offsetTop - element.scrollTop
 
-        if(position === "programsScroll"){
-            temp = temp + 175
-            if(window.innerWidth < 1450){
-                temp = temp - 100
-            }
-        }
+        // if(position === "programsScroll"){
+        //     temp = temp + 175
+        //     if(window.innerWidth < 1450){
+        //         temp = temp - 100
+        //     }
+        // }
         
         ///Position changes for scroll points
         if(position === "overviewScroll") temp = temp - 150

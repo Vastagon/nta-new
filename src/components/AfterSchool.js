@@ -71,6 +71,7 @@ export default function AfterSchool(){
                 </div>
                 <img alt="Taekwondo Family Friendly" className="temp-right-image" src={require("../images/handshake.jpg")} />
             </div>
+            <div id="programsScroll" />
 
 
         </div>
