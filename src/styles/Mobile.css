@@ -79,7 +79,7 @@
     }
     .overview{
       margin-top: 30%;
-      margin-left: 10%;
+      margin-left: 5%;
       width: 90%;
     }
     .afterschool-content{
@@ -87,7 +87,16 @@
       margin-left: 5%;
       margin-bottom: 8%;
     }
-  
+    .after-school-card{
+      font-size: 10px;
+    }
+    .left-card{
+      padding-right: 1rem;
+    }
+    .after-school-card:nth-child(odd) .left-card{
+      padding-left: 1rem;
+  }
+
   
     /* Reviews */
     .reviews-container{
