@@ -2,7 +2,7 @@ export default function Footer({clickScrollTo}){
 
     return(
         <footer className="nav-close" id="footer">
-            <img alt="NTA Taekwondo Logo" className="footer-icon" src={require("../images/NTALogo.webp")} />
+            <img alt="NTA Taekwondo Logo" className="footer-icon footer-segment" src={require("../images/NTALogo.webp")} />
             <div className="quick-links footer-segment">
                 <h2>Quick Links</h2>
 

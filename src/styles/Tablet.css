@@ -2,7 +2,10 @@
     /* Reviews */
     .reviews-container{
         grid-template-columns: 100%; 
-        margin-top: 10vh;      
+        margin-top: 0vh;      
+    }
+    .reviews-title{
+        margin-top: 15%;
     }
     .card-group{
         width: 100vw;
@@ -119,6 +122,8 @@
     .footer-icon{
         padding-top: 5vh;
         margin-left: 2%;
+        width: 50%;
+        margin-left: 25%;
     }
     .quick-links > div, .contactus-footer{
         text-align: center;
@@ -147,6 +152,12 @@
     /* Afterschool */
     .overview{
         margin-top: 0%;
+    }
+    .after-school-card{
+        font-size: 13px;
+        width: 90%;
+        height: 30vh;
+        margin-left: 5%;
     }
 
 
@@ -179,17 +190,34 @@
     }
 
 
+
     .contact-us{
-        flex-direction: column;
-        width: 70%;
-        margin-left: 15%;
-    }
-    .contact-form{
-        margin-top: 5%;
-        width: auto;
+        width: 100vw;
+        font-size: .6rem;
     }
     .contactus-card{
+        flex-direction: column;
+        margin-top: 0%;
+    }
+    .contact-info{
+        font-size: .6rem;
+    }
+    .contact-us-form{
+        margin: 0;
+        margin-top: 15%;
+        width: 80%;
+    }
+    .contact-us-form > button{
         width: 100%;
+        margin: 0;
+        margin-top: 6%;
+    }
+    .contact-us-form > input{
+        padding: .5rem;
+        font-size: 1rem;
+    }
+    .contact-us-header{
+        margin-top: 20%;
     }
 }
 

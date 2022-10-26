@@ -37,7 +37,7 @@ export default function ContactUs({setShowFailedCard, setShowAcceptedCard}){
 
     return(
         <>
-        <h3 style={{textAlign: "center"}}>Contact Us</h3>
+        <h3 className="contact-us-header">Contact Us</h3>
             <div className="contact-us nav-close">
                 <div className='contactus-card'>
                     <div className='contact-info'>
