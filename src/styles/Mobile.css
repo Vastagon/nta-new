@@ -1,228 +1,245 @@
 /* Mobile */
 @media screen and (max-width: 550px) {
-    /* Navbar */
-    .mynav{
-      z-index: 5;
-    }
-    .mobile-nav{
-      display: flex;
-      flex-direction: column;
-      padding-top: 10%;
-    }
-    .nav-tab{
-      font-size: 1rem;
-      margin-left: 0rem;
-      margin-top: 10%;
-      opacity: 1;
-      color: white;
+  /* Navbar */
+  .mynav{
+    z-index: 5;
+  }
+  .mobile-nav{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+  }
+  .nav-tab{
+    font-size: 1rem;
+    margin-left: 0rem;
+    margin-top: 10%;
+    opacity: 1;
+    color: white;
 
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .desktop-tab{
-      margin-left: 1.5rem;
-      opacity: 1;
-      /* color: var(--quick-links-text-color); */
-      /* color: rgb(9, 97, 9); */
-      color: rgb(9, 87, 9);
-    
-      font-size: 1.2rem;
-    }
-    .icon{
-      margin-top: 0;
-      margin-left: 1rem;
-    }
-    .hidden{
-      display: none;
-    }
-
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .desktop-tab{
+    margin-left: 1.5rem;
+    opacity: 1;
+    /* color: var(--quick-links-text-color); */
+    /* color: rgb(9, 97, 9); */
+    color: rgb(9, 87, 9);
   
-  
-    /* Programs */
-    .programs{
-      flex-direction: column;
-    }
-    .program-image{
-      width: 80%;
-      height: 40vh;
-      margin-left: 10%;
-    }
-    .traditional-program{
-      margin-top: 20%;
-    }
-    .programs-header{
-      margin-top: 25%;
-    }
-    .hammadang-program{
-      margin-bottom: 5%;
-    }
-
-    
-
-
-    /* AfterSchool */
-    .image-segment{
-      height: auto;
-      flex-direction: column-reverse;
-    }
-    .right-image{
-      width: 90%;
-      margin-right: 0%;
-      margin-left: 2.5%;
-    }
-    .image-segment:nth-child(odd){
-      flex-direction: column-reverse;
-    }
-    .image-segment:nth-child(even){
-      flex-direction: column;
-    }
-    .overview{
-      margin-top: 30%;
-      margin-left: 5%;
-      width: 90%;
-    }
-    .afterschool-content{
-      width: 90%;
-      margin-left: 5%;
-      margin-bottom: 8%;
-    }
-    .after-school-card{
-      font-size: 10px;
-    }
-    .left-card{
-      padding-right: 1rem;
-    }
-    .after-school-card:nth-child(odd) .left-card{
-      padding-left: 1rem;
+    font-size: 1.2rem;
+  }
+  .icon{
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+  .hidden{
+    display: none;
   }
 
   
-    /* Reviews */
-    .reviews-container{
-      grid-template-columns: 100%;
-      margin-left: 0%;
-      margin-right: 0%;
-      grid-gap: 2%;
-      margin-top: 8vh;
-      padding-bottom: 35%;
-    }
-    .reviews-title{
-      position: relative;
-      padding-top: 2rem;
-    }
-    .my-2{
-      width: 90%;
-    }
-    .card-title{
-      font-size: 1.4rem;
-    }
-    .card-text{
-      font-size: 1.1rem;
-    }
   
-  
-  
-  
-    /* Contact */
-    .contact-us{
-      flex-direction: column;
-    }
-    .contactus-card{
-      width: 90%;
-      margin-left: 5%;
-      margin-top: 25%;
-      padding-left: 2rem;
-      padding-right: 2rem;  
-      padding-bottom: 2rem;
-      margin-bottom: 2rem;
-    }
-    .contact-input{
-      width: 90%;
-      padding-bottom: 1rem;
-      border-radius: 10px;
-      margin-left: 5%;
-      margin-top: 5%;
-    }
-    .contact-form{
-      width: 90%;
-      margin-left: 5%;
-    }
-    .card-text{
-      font-size: .8rem;
-    }
-  
-  
-    /* Schedule */
-    .mobile-schedule{
-      margin-top: 20%;
-      width: 90%;
-      margin-left: 5%;
-    }
-    .mobile-schedule-day-container:nth-last-child(1){
-      margin-bottom: 20%;
-    }
-    .mobile-schedule-day-container{
-      text-align: left;
-      padding-bottom: 2rem;
-      background-color: var(--scheme-green);
-      color: white;
-      margin-top: 10%;
+  /* Programs */
+  .programs{
+    flex-direction: column;
+  }
+  .program-image{
+    width: 80%;
+    height: 40vh;
+    margin-left: 10%;
+  }
+  .traditional-program{
+    margin-top: 20%;
+  }
+  .programs-header{
+    margin-top: 25%;
+  }
+  .hammadang-program{
+    margin-bottom: 5%;
+  }
 
-      border-radius: 10px;
-    }
-    .mobile-schedule-day-container > h4{
-      text-align: left;
-      padding-left: 5%;
-      padding-top: 5%;
-      padding-bottom: 2%;
-      border-top: 0;
-      border-left: 0;
-      border-right: 0;
-      border-bottom: 2px;
-      border-color: white;
-      border-style: solid;
-      margin-bottom: 0;
-    }
-    .mobile-schedule-day-container:nth-child(odd){
-      background-color: var(--nta-green);
-    }
-    .mobile-times-grid{
-      margin-top: 2%;
-      display: grid;
-      grid-template-columns: 40% 60%;
-    }
-    .mobile-times-grid > p{
-      padding-left: 15%;
-    }
+    
+
+
+  /* AfterSchool */
+  .image-segment{
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  .right-image{
+    width: 90%;
+    margin-right: 0%;
+    margin-left: 2.5%;
+  }
+  .image-segment:nth-child(odd){
+    flex-direction: column-reverse;
+  }
+  .image-segment:nth-child(even){
+    flex-direction: column;
+  }
+  .overview{
+    margin-top: 30%;
+    margin-left: 5%;
+    width: 90%;
+  }
+  .afterschool-content{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 8%;
+  }
+  /* .after-school-card{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 2rem;
+  }
+  .temp-right-image{
+    max-width: 100%;
+    width: 80%;
+  }
+  .left-card{
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .after-school-card:nth-child(odd){
+    padding-left: 0;
+  }
+  .after-school-card:nth-child(odd) .left-card{
+    padding-left: 2rem;
+  } */
+
+  
+  /* Reviews */
+  .reviews-container{
+    grid-template-columns: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    grid-gap: 2%;
+    margin-top: 8vh;
+    padding-bottom: 35%;
+  }
+  .reviews-title{
+    position: relative;
+    padding-top: 2rem;
+  }
+  .my-2{
+    width: 90%;
+  }
+  .card-title{
+    font-size: 1.4rem;
+  }
+  .card-text{
+    font-size: 1.1rem;
+  }
   
   
   
-    /* Home */
-    .home-content{
-      padding-left: 5%;
-      padding-right: 5%;
-    }
-    .slider{
-      width: 100%;
-      margin: 0;
-      margin-top: 25%;
-      padding-bottom: 5%;
-    }
-    .slider-left-arrow{
-      transform: rotate(45deg);
-      left: 3%;
-    }
-    .slider-right-arrow{
-      transform: rotate(225deg);
-      right: 3%;
-    }
-    .home-image{
-      height: 40vh;
-      width: 100%;
-      margin-left: 0%;
-      margin-top: 0%;
-    }
+  
+  /* Contact */
+  .contact-us{
+    flex-direction: column;
+  }
+  .contactus-card{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 25%;
+    padding-left: 2rem;
+    padding-right: 2rem;  
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  .contact-input{
+    width: 90%;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+  .contact-form{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .contact-us-form > label{
+    font-size: 1rem;
+  }
+  .card-text{
+    font-size: .8rem;
+  }
+
+
+  /* Schedule */
+  .mobile-schedule{
+    margin-top: 20%;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mobile-schedule-day-container:nth-last-child(1){
+    margin-bottom: 20%;
+  }
+  .mobile-schedule-day-container{
+    text-align: left;
+    padding-bottom: 2rem;
+    background-color: var(--scheme-green);
+    color: white;
+    margin-top: 10%;
+
+    border-radius: 10px;
+  }
+  .mobile-schedule-day-container > h4{
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px;
+    border-color: white;
+    border-style: solid;
+    margin-bottom: 0;
+  }
+  .mobile-schedule-day-container:nth-child(odd){
+    background-color: var(--nta-green);
+  }
+  .mobile-times-grid{
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  .mobile-times-grid > p{
+    padding-left: 15%;
+  }
+
+
+
+  /* Home */
+  .home-content{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .slider{
+    width: 100%;
+    margin: 0;
+    margin-top: 25%;
+    padding-bottom: 5%;
+  }
+  .slider-left-arrow{
+    transform: rotate(45deg);
+    left: 3%;
+  }
+  .slider-right-arrow{
+    transform: rotate(225deg);
+    right: 3%;
+  }
+  .home-image{
+    height: 40vh;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
 /* Slide off Animations */
 @keyframes image-slide-left {
   0%{

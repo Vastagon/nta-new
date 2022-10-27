@@ -151,14 +151,36 @@
 
     /* Afterschool */
     .overview{
+        width: 80%;
         margin-top: 0%;
-        margin-left: 0;
+        margin-left: 10%;
+        margin-right: 0;
     }
     .after-school-card{
-        font-size: 13px;
         width: 90%;
-        height: 30vh;
         margin-left: 5%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-bottom: 2rem;
+    }
+    .temp-right-image{
+        max-width: 100%;
+        width: 80%;
+    }
+    .left-card{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    .after-school-card:nth-child(odd){
+        padding-left: 0;
+        flex-direction: column-reverse;
+    }
+    .after-school-card:nth-child(odd) .left-card{
+        padding-left: 2rem;
     }
 
 
@@ -170,6 +192,9 @@
     }
     .programs-card-container{
         flex-direction: column;
+        width: 90%;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     .programs-card{
         width: 100%;
@@ -217,6 +242,9 @@
         padding: .5rem;
         font-size: 1rem;
     }
+    .contact-us-form > label{
+        font-size: 1.5rem;
+      }
     .contact-us-header{
         margin-top: 20%;
     }
