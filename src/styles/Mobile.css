@@ -1,5 +1,8 @@
 /* Mobile */
 @media screen and (max-width: 550px) {
+  .slider-container{
+    margin-top: 0;
+  }
   /* Navbar */
   .mynav{
     z-index: 5;

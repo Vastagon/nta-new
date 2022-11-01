@@ -3,7 +3,7 @@
   /* F7F9FB */
   --navbar-color: #F7F9FB;
   --quick-links-text-color: #135344;
-  --navbar-text: #199E1B;
+  --navbar-text: #1e7e4e;
   --scheme-black: #040F0F;
   --scheme-white: #FFFFFF;
   --scheme-gray: #BEBFC4;
@@ -283,7 +283,8 @@ h1,h2,h3,h4{
   opacity: 1;
   /* color: var(--quick-links-text-color); */
   /* color: rgb(9, 97, 9); */
-  color: rgb(9, 87, 9);
+  /* color: rgb(9, 87, 9); */
+  color: var(--navbar-text);
 
   font-size: 1.2rem;
 }
@@ -484,7 +485,7 @@ h1,h2,h3,h4{
 
 
 /* Home Slider */
-.slider-containter{
+.slider-container{
   position: relative;
   width: 100%;
   overflow: hidden;

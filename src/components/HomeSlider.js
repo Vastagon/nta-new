@@ -53,7 +53,7 @@ export default function HomeSlider({imageArray}){
     }, [imageArrayPosition])
 
     return(
-        <div className="slider-containter">
+        <div className="slider-container">
         {isAnimationRunning ? 
             <div className="slider">
                 <div id="slider-left-arrow" className="slider-left-arrow slider-arrow"></div>
