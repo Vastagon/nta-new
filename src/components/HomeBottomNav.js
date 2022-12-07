@@ -67,7 +67,7 @@ export default function HomeBottomNav({setShowAcceptedCard, showAcceptedCard, sh
                 <label>Email <span className="asterisk">*</span></label>
                 <input placeholder="Required" required id="bottom-nav-form-email" name="email" />
                 <label>Phone Number <span className="asterisk">*</span></label>
-                <input required id="bottom-nav-form-phone" name="phone" />
+                <input placeholder="Required" required id="bottom-nav-form-phone" name="phone" />
                 <label>Message</label>
                 <input placeholder="Optional" id="bottom-nav-form-message" name="message" />
 
