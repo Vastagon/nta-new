@@ -26,12 +26,17 @@ export default function HomeBottomNav({setShowAcceptedCard, showAcceptedCard, sh
             console.log('SUCCESS!', response.status, response.text);
             setBottomFormSendingEmail(false)
             setShowAcceptedCard(true)
-            setBottomFormInfo({name: "", phone: "", email: ""})
+            document.getElementById("name").value = ""
+            document.getElementById("email").value = ""
+            document.getElementById("phone").value = ""
+            document.getElementById("message").value = ""    
+            setBottomFormInfo({name: "", phone: "", email: "", message: ""})
         }, (err) => {
             console.log('FAILED...', err);
             setBottomFormSendingEmail(false)
             setShowFailedCard(true)
         });
+
     }
 
 
@@ -61,8 +66,10 @@ export default function HomeBottomNav({setShowAcceptedCard, showAcceptedCard, sh
                 <input placeholder="Required" required id="bottom-nav-form-name" name="name" />
                 <label>Email <span className="asterisk">*</span></label>
                 <input placeholder="Required" required id="bottom-nav-form-email" name="email" />
-                <label>Phone Number</label>
+                <label>Phone Number <span className="asterisk">*</span></label>
                 <input required id="bottom-nav-form-phone" name="phone" />
+                <label>Message</label>
+                <input placeholder="Optional" id="bottom-nav-form-message" name="message" />
 
                 <button className="bottom-form-submit-button" type="submit">Submit</button>
             </form>      
@@ -83,8 +90,11 @@ export default function HomeBottomNav({setShowAcceptedCard, showAcceptedCard, sh
                     <input placeholder="Required" required id="bottom-nav-form-name" name="name" />
                     <label>Email <span className="asterisk">*</span></label>
                     <input placeholder="Required" required id="bottom-nav-form-email" name="email" />
-                    <label>Phone Number</label>
-                    <input required id="bottom-nav-form-phone" name="phone" />
+                    <label>Phone Number <span className="asterisk">*</span></label>
+                    <input placeholder="Required" required id="bottom-nav-form-phone" name="phone" />
+                    <label>Message</label>
+                    <input placeholder="Optional" id="bottom-nav-form-message" name="message" />
+
 
                     <button className="bottom-form-submit-button" type="submit">Submit</button>
                 </form> 

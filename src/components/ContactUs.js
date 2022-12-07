@@ -21,6 +21,7 @@ export default function ContactUs({setShowFailedCard, setShowAcceptedCard}){
             document.getElementById("name").value = ""
             document.getElementById("email").value = ""
             document.getElementById("phone").value = ""
+            document.getElementById("message").value = ""
         }, (err) => {
             console.log('FAILED...', err);
             setCurrentlySendingEmail(false)
@@ -50,13 +51,16 @@ export default function ContactUs({setShowFailedCard, setShowAcceptedCard}){
 
                     <form onSubmit={sendEmail} className="contact-us-form">
                         <label>Name <span className="asterisk">*</span></label>
-                        <input id="name" onChange={updateForm} name="name" type="text" />
+                        <input required id="name" onChange={updateForm} name="name" type="text" />
 
                         <label>Email <span className="asterisk">*</span></label>
-                        <input id="email" onChange={updateForm} name="email" type="text" />
+                        <input required id="email" onChange={updateForm} name="email" type="text" />
 
-                        <label>Phone</label>
-                        <input id="phone" onChange={updateForm} name="phone" type="text" />
+                        <label>Phone <span className="asterisk">*</span></label>
+                        <input required id="phone" onChange={updateForm} name="phone" type="text" />
+
+                        <label>Message</label>
+                        <input placeholder="Optional" id="bottom-nav-form-message" name="message" />
 
                         <button type="submit">Submit</button>
                     </form>
