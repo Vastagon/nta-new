@@ -45,7 +45,7 @@ export default function ContactUs({setShowFailedCard, setShowAcceptedCard}){
                         <h4>Contact Info</h4>
                         <div>3000 Grapevine Mills Pkwy, Grapevine, Texas</div>
                         <div>ntataekwondo@gmail.com</div>
-                        <div>(972) 471-2333</div>
+                        <div>(972) 532-3400</div>
                     </div>
 
 

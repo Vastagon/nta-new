@@ -19,7 +19,7 @@ export default function Footer({clickScrollTo}){
                     <h2>Contact Us</h2>
                     <div>3000 Grapevine Mills Pkwy, Grapevine, Texas</div>
                     <div>ntataekwondo@gmail.com</div>
-                    <div>(972) 471-2333</div>
+                    <div>(972) 532-3400</div>
                     <img alt="Facebook Taekwondo Logo" onClick={() => {window.open("https://www.facebook.com/groups/403731716464076", "_blank")}} className='facebook-icon' src="https://louisville.edu/english/images/facebookicon.png/image" />
                 </div>
             </div>
