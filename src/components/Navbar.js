@@ -60,7 +60,7 @@ export default function Navbar({clickScrollTo, setShowMobileNav, showMobileNav})
             <div className="nav-tab-container">
                 <div onClick={() => {clickScrollTo("overviewScroll")}} className="desktop-tab overview-tab nav-tab">Overview</div>                
                 <div onClick={() => {clickScrollTo("programsScroll")}} className="desktop-tab programs-tab nav-tab">Programs</div>
-                <div onClick={() => {clickScrollTo("scheduleScroll")}} className="desktop-tab schedule-tab nav-tab">Schedule</div>
+                {/* <div onClick={() => {clickScrollTo("scheduleScroll")}} className="desktop-tab schedule-tab nav-tab">Schedule</div> */}
                 <div onClick={() => {clickScrollTo("reviewsScroll")}} className="desktop-tab reviews-tab nav-tab">Reviews</div>
                 <div onClick={() => {clickScrollTo("contactUsScroll")}} className="desktop-tab contactus-tab nav-tab">Contact Us</div>
             </div>

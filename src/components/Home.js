@@ -79,7 +79,7 @@ export default function Home(){
         if(position === "overviewScroll") temp = temp - 150
         if(position === "scheduleScroll") temp = temp - 180
         if(position === "contactUsScroll") temp = temp - 150
-        if(position === "reviewsScroll") temp = temp - 50
+        if(position === "reviewsScroll") temp = temp - 150
 
         window.scrollTo(0, temp)
 
@@ -127,7 +127,7 @@ export default function Home(){
 
                 <AfterSchool />
                 <Programs />
-                <Schedule />
+                {/* <Schedule /> */}
                 <Reviews />
                 <ContactUs showFailedCard={showFailedCard} setShowFailedCard={setShowFailedCard} showAcceptedCard={showAcceptedCard} setShowAcceptedCard={setShowAcceptedCard} />
                 </div>

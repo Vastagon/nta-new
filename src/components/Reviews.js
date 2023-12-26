@@ -3,7 +3,7 @@ import ReviewsCard from "./ReviewsCard";
 export default function Reviews(){
     return(
         <div className="reviews nav-close">
-            <h1 className="reviews-title">People Love our School</h1>
+            <h1 id="reviewsScroll" className="reviews-title">People Love our School</h1>
 
             <div className="reviews-container">
                 <ReviewsCard 
