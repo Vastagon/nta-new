@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import * as emailjs from 'emailjs-com'
 import Spinner from "./Spinner"
 import FailedEmail from "./FailedEmail"
@@ -17,26 +17,48 @@ export default function HomeBottomNav({setShowAcceptedCard, showAcceptedCard, sh
         }))
     }
 
+
     function submitBottomForm(e){
         e.preventDefault()
         ///Uses emailjs to send email
         setBottomFormSendingEmail(true)
-        emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, bottomFormInfo, process.env.REACT_APP_PUBLIC_KEY)
-        .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            setBottomFormSendingEmail(false)
-            setShowAcceptedCard(true)
-            document.getElementById("name").value = ""
-            document.getElementById("email").value = ""
-            document.getElementById("phone").value = ""
-            document.getElementById("message").value = ""    
-            setBottomFormInfo({name: "", phone: "", email: "", message: ""})
-        }, (err) => {
-            console.log('FAILED...', err);
-            setBottomFormSendingEmail(false)
-            setShowFailedCard(true)
-        });
 
+        if(!bottomFormInfo.website){
+            emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, bottomFormInfo, process.env.REACT_APP_PUBLIC_KEY)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setBottomFormSendingEmail(false)
+                setShowAcceptedCard(true)
+                document.getElementById("name").value = ""
+                document.getElementById("email").value = ""
+                document.getElementById("phone").value = ""
+                document.getElementById("message").value = ""    
+                setBottomFormInfo({name: "", phone: "", email: "", message: ""})
+            }, (err) => {
+                console.log('FAILED...', err);
+                setBottomFormSendingEmail(false)
+                setShowFailedCard(true)
+            });
+        } else {
+            const { website, ...cleanData } = bottomFormInfo;
+            setBottomFormInfo(cleanData);
+
+            emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_FAILED_TEMPLATE_ID, cleanData, process.env.REACT_APP_PUBLIC_KEY)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setBottomFormSendingEmail(false)
+                setShowAcceptedCard(true)
+                document.getElementById("name").value = ""
+                document.getElementById("email").value = ""
+                document.getElementById("phone").value = ""
+                document.getElementById("message").value = ""    
+                setBottomFormInfo({name: "", phone: "", email: "", message: ""})
+            }, (err) => {
+                console.log('FAILED...', err);
+                setBottomFormSendingEmail(false)
+                setShowFailedCard(true)
+            });  
+        }
     }
 
 
@@ -70,6 +92,9 @@ export default function HomeBottomNav({setShowAcceptedCard, showAcceptedCard, sh
                 <input placeholder="Required" required id="bottom-nav-form-phone" name="phone" />
                 <label>Message</label>
                 <input placeholder="Optional" id="bottom-nav-form-message" name="message" />
+
+                <input placeholder="website" id="bottom-nav-form-website" name="website" />
+
 
                 <button className="bottom-form-submit-button" type="submit">Submit</button>
             </form>      

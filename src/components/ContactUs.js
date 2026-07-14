@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as emailjs from 'emailjs-com'
 import Spinner from "./Spinner";
 
@@ -7,26 +7,50 @@ export default function ContactUs({setShowFailedCard, setShowAcceptedCard}){
     const [currentlySendingEmail, setCurrentlySendingEmail] = useState(false)
     const [formInput, setFormInput] = useState({})
 
+
     function sendEmail(e){
         e.preventDefault()
         ///Uses emailjs to send email
         setCurrentlySendingEmail(true)
-        emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, formInput, process.env.REACT_APP_PUBLIC_KEY)
-        .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            setCurrentlySendingEmail(false)
-            setShowAcceptedCard(true)
-            setFormInput({name: "", phone: "", email: ""})
-            ///Empty form inputs
-            document.getElementById("name").value = ""
-            document.getElementById("email").value = ""
-            document.getElementById("phone").value = ""
-            document.getElementById("message").value = ""
-        }, (err) => {
-            console.log('FAILED...', err);
-            setCurrentlySendingEmail(false)
-            setShowFailedCard(true)
-        });
+
+        if(!formInput.website){
+            emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, formInput, process.env.REACT_APP_PUBLIC_KEY)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setCurrentlySendingEmail(false)
+                setShowAcceptedCard(true)
+                setFormInput({name: "", phone: "", email: "", message: ""})
+                ///Empty form inputs
+                document.getElementById("name").value = ""
+                document.getElementById("email").value = ""
+                document.getElementById("phone").value = ""
+                document.getElementById("message").value = ""
+            }, (err) => {
+                console.log('FAILED...', err);
+                setCurrentlySendingEmail(false)
+                setShowFailedCard(true)
+            });
+        } else {
+            emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_FAILED_TEMPLATE_ID, formInput, process.env.REACT_APP_PUBLIC_KEY)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setCurrentlySendingEmail(false)
+                setShowAcceptedCard(true)
+                setFormInput({name: "", phone: "", email: "", message: ""})
+                ///Empty form inputs
+                document.getElementById("name").value = ""
+                document.getElementById("email").value = ""
+                document.getElementById("phone").value = ""
+                document.getElementById("message").value = ""
+            }, (err) => {
+                console.log('FAILED...', err);
+                setCurrentlySendingEmail(false)
+                setShowFailedCard(true)
+            });
+        }
+
+
+
     }
     ///Updates state component
     function updateForm(e){
@@ -60,7 +84,9 @@ export default function ContactUs({setShowFailedCard, setShowAcceptedCard}){
                         <input required id="phone" onChange={updateForm} name="phone" type="text" />
 
                         <label>Message</label>
-                        <input placeholder="Optional" id="bottom-nav-form-message" name="message" />
+                        <input placeholder="Optional" id="message" onChange={updateForm} name="message" />
+
+                        <input placeholder="website" onChange={updateForm} id="website" name="website" />
 
                         <button type="submit">Submit</button>
                     </form>
